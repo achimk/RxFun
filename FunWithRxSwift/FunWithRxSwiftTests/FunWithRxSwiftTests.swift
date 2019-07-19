@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import RxSwift
+import RxBlocking
 @testable import FunWithRxSwift
 
 class FunWithRxSwiftTests: XCTestCase {

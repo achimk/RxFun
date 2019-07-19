@@ -1,4 +1,3 @@
-source 'https://github.com/CocoaPods/Specs.git'
 # Uncomment this line to define a global platform for your project
 platform :ios, '12.0'
 # Uncomment this line if you're using Swift
@@ -8,9 +7,16 @@ workspace 'RxFun'
 
 def commons
     pod 'RxSwift', '4.4.1'
+    pod 'RxCocoa', '4.4.1'
+    pod 'RxBlocking', '4.4.1'
 end
 
 target 'FunWithRxSwift' do
+    project 'FunWithRxSwift/FunWithRxSwift.xcodeproj'
+    commons
+end
+
+target 'FunWithRxSwiftTests' do
     project 'FunWithRxSwift/FunWithRxSwift.xcodeproj'
     commons
 end
