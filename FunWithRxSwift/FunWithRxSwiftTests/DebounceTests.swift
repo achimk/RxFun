@@ -26,7 +26,7 @@ final class DebounceTests: XCTestCase {
         let observableB = BehaviorRelay(value: 1)
         
         observableA
-            .debounce(3, scheduler: MainScheduler.instance)
+            .debounce(.seconds(3), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .subscribe(onNext: { value in
                 observableB.accept(value)

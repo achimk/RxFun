@@ -5,20 +5,25 @@ use_frameworks!
 
 workspace 'RxFun'
 
-def commons
-    pod 'RxSwift', '4.4.1'
-    pod 'RxCocoa', '4.4.1'
-    pod 'RxBlocking', '4.4.1'
+def main
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+end
+
+def tests
+  pod 'RxBlocking', '~> 5'
+  pod 'RxTest', '~> 5'
 end
 
 target 'FunWithRxSwift' do
     project 'FunWithRxSwift/FunWithRxSwift.xcodeproj'
-    commons
+    main
 end
 
 target 'FunWithRxSwiftTests' do
     project 'FunWithRxSwift/FunWithRxSwift.xcodeproj'
-    commons
+    main
+    tests
 end
 
 # post_install do |installer|
