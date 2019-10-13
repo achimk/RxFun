@@ -29,7 +29,7 @@ func loginViewModel(api: AuthenticationAPI) -> (LoginViewModelInput) -> LoginVie
         let progress = activityTracker.asDriver()
         
         let success = Observable.combineLatest(input.username, input.password)
-            .flatMap { (username, password) in
+            .flatMapLatest { (username, password) in
                 input.login.map { (username, password) }
             }
             .flatMap(authenticate)

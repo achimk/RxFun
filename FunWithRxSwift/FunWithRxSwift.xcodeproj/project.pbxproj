@@ -16,7 +16,6 @@
 		274FACB523028ECA0081D97D /* ActivityIdicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274FACB423028ECA0081D97D /* ActivityIdicatorTests.swift */; };
 		274FACB723028ED50081D97D /* ErrorTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274FACB623028ED50081D97D /* ErrorTrackerTests.swift */; };
 		275E5DCC22F56A8F005EF354 /* LoopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275E5DCB22F56A8F005EF354 /* LoopTests.swift */; };
-		2768F86D235362D80093A48D /* LoginVM+Simplified.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2768F865235354880093A48D /* LoginVM+Simplified.swift */; };
 		2769418C22F043ED00627BCB /* DebounceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2769418B22F043ED00627BCB /* DebounceTests.swift */; };
 		27A14AA222E72B7F00491CAB /* DispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A14AA122E72B7F00491CAB /* DispatchTests.swift */; };
 		27A14B0F22E7436900491CAB /* ShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A14B0E22E7436900491CAB /* ShareTests.swift */; };
@@ -67,6 +66,7 @@
 		2768F85E23534C560093A48D /* LoginVM+Raw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVM+Raw.swift"; sourceTree = "<group>"; };
 		2768F865235354880093A48D /* LoginVM+Simplified.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVM+Simplified.swift"; sourceTree = "<group>"; };
 		2768F86723535AC90093A48D /* LoginVM+Fun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVM+Fun.swift"; sourceTree = "<group>"; };
+		2768F86E235366A80093A48D /* LoginVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVMTests.swift; sourceTree = "<group>"; };
 		2769418B22F043ED00627BCB /* DebounceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebounceTests.swift; sourceTree = "<group>"; };
 		27A14AA122E72B7F00491CAB /* DispatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchTests.swift; sourceTree = "<group>"; };
 		27A14B0E22E7436900491CAB /* ShareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTests.swift; sourceTree = "<group>"; };
@@ -188,6 +188,7 @@
 		27E73FFE22E162F9005BAAB1 /* FunWithRxSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				2768F86E235366A80093A48D /* LoginVMTests.swift */,
 				274FACB423028ECA0081D97D /* ActivityIdicatorTests.swift */,
 				274FACB623028ED50081D97D /* ErrorTrackerTests.swift */,
 				27A7939922FC721700FF44C7 /* SingleZipTests.swift */,
@@ -452,7 +453,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2768F86D235362D80093A48D /* LoginVM+Simplified.swift in Sources */,
 				27343184235341A300C8C416 /* ActivityIndicator.swift in Sources */,
 				27E73FED22E162F7005BAAB1 /* ViewController.swift in Sources */,
 				27343186235341A300C8C416 /* Feedbacks.swift in Sources */,
