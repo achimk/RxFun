@@ -17,6 +17,7 @@
 		274FACB723028ED50081D97D /* ErrorTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274FACB623028ED50081D97D /* ErrorTrackerTests.swift */; };
 		275E5DCC22F56A8F005EF354 /* LoopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275E5DCB22F56A8F005EF354 /* LoopTests.swift */; };
 		2769418C22F043ED00627BCB /* DebounceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2769418B22F043ED00627BCB /* DebounceTests.swift */; };
+		279E30A52357395C00E453C0 /* LoginVM+Fun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2768F86723535AC90093A48D /* LoginVM+Fun.swift */; };
 		27A14AA222E72B7F00491CAB /* DispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A14AA122E72B7F00491CAB /* DispatchTests.swift */; };
 		27A14B0F22E7436900491CAB /* ShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A14B0E22E7436900491CAB /* ShareTests.swift */; };
 		27A14B5122E769F200491CAB /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A14B5022E769F200491CAB /* CacheTests.swift */; };
@@ -57,14 +58,10 @@
 		27343180235341A200C8C416 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		27343181235341A200C8C416 /* Observable+SystemExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+SystemExtensions.swift"; sourceTree = "<group>"; };
 		27343182235341A200C8C416 /* Feedbacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedbacks.swift; sourceTree = "<group>"; };
-		273431892353432000C8C416 /* LoginVM+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVM+Protocol.swift"; sourceTree = "<group>"; };
 		2734318B235344C700C8C416 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAPI.swift; sourceTree = "<group>"; };
 		274FACB423028ECA0081D97D /* ActivityIdicatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIdicatorTests.swift; sourceTree = "<group>"; };
 		274FACB623028ED50081D97D /* ErrorTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTrackerTests.swift; sourceTree = "<group>"; };
 		275E5DCB22F56A8F005EF354 /* LoopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopTests.swift; sourceTree = "<group>"; };
-		2768F85C23534B760093A48D /* LoginVM+InputOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVM+InputOutput.swift"; sourceTree = "<group>"; };
-		2768F85E23534C560093A48D /* LoginVM+Raw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVM+Raw.swift"; sourceTree = "<group>"; };
-		2768F865235354880093A48D /* LoginVM+Simplified.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVM+Simplified.swift"; sourceTree = "<group>"; };
 		2768F86723535AC90093A48D /* LoginVM+Fun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVM+Fun.swift"; sourceTree = "<group>"; };
 		2768F86E235366A80093A48D /* LoginVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVMTests.swift; sourceTree = "<group>"; };
 		2769418B22F043ED00627BCB /* DebounceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebounceTests.swift; sourceTree = "<group>"; };
@@ -128,10 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				2734318B235344C700C8C416 /* AuthenticationAPI.swift */,
-				2768F85E23534C560093A48D /* LoginVM+Raw.swift */,
-				273431892353432000C8C416 /* LoginVM+Protocol.swift */,
-				2768F85C23534B760093A48D /* LoginVM+InputOutput.swift */,
-				2768F865235354880093A48D /* LoginVM+Simplified.swift */,
 				2768F86723535AC90093A48D /* LoginVM+Fun.swift */,
 			);
 			path = LoginViewModel;
@@ -457,6 +450,7 @@
 				27E73FED22E162F7005BAAB1 /* ViewController.swift in Sources */,
 				27343186235341A300C8C416 /* Feedbacks.swift in Sources */,
 				2734318C235344C700C8C416 /* AuthenticationAPI.swift in Sources */,
+				279E30A52357395C00E453C0 /* LoginVM+Fun.swift in Sources */,
 				27343183235341A300C8C416 /* ErrorTracker.swift in Sources */,
 				27343185235341A300C8C416 /* Observable+SystemExtensions.swift in Sources */,
 				27E73FEB22E162F7005BAAB1 /* AppDelegate.swift in Sources */,
