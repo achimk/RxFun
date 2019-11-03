@@ -19,8 +19,9 @@ final class ViewStoreTests: XCTestCase {
     func testWaitIfEmptyStore() {
      
         let e = expectation(description: #function)
-        let store = ViewStore(provider: { Single<Int>.just(1) }, refresh: .empty(), behaviour: .waitIfEmpty)
-        let state = store.create()
+        let state = ViewStoreFactory<Void, Int>
+            .using(provider: { Single<Int>.just(1) }, refresh: .empty(), shouldLoadIfEmpty: false)
+            .create()
         
         state.subscribe(onNext: { (viewState) in
             print("*", viewState)
@@ -33,8 +34,9 @@ final class ViewStoreTests: XCTestCase {
     func testLoadIfEmptyStore() {
      
         let e = expectation(description: #function)
-        let store = ViewStore(provider: { Single<Int>.just(1) }, refresh: .empty(), behaviour: .loadIfEmpty)
-        let state = store.create()
+        let state = ViewStoreFactory<Void, Int>
+            .using(provider: { Single<Int>.just(1) }, refresh: .empty(), shouldLoadIfEmpty: true)
+            .create()
         
         state.subscribe(onNext: { (viewState) in
             print("*", viewState)
@@ -48,8 +50,9 @@ final class ViewStoreTests: XCTestCase {
         
         let e = expectation(description: #function)
         let refresh = PublishSubject<Void>()
-        let store = ViewStore(provider: { Single<Int>.just(1) }, refresh: refresh, behaviour: .waitIfEmpty)
-        let state = store.create()
+        let state = ViewStoreFactory<Void, Int>
+            .using(provider: { Single<Int>.just(1) }, refresh: refresh, shouldLoadIfEmpty: false)
+            .create()
         
         state.subscribe(onNext: { (viewState) in
             print("*", viewState)
@@ -67,8 +70,9 @@ final class ViewStoreTests: XCTestCase {
         
         let e = expectation(description: #function)
         let refresh = PublishSubject<Void>()
-        let store = ViewStore(provider: { Single<Int>.just(1) }, refresh: refresh)
-        let state = store.create()
+        let state = ViewStoreFactory<Void, Int>
+            .using(provider: { Single<Int>.just(1) }, refresh: refresh, shouldLoadIfEmpty: false)
+            .create()
         
         state.subscribe(onNext: { (viewState) in
             print("*", viewState)
@@ -87,8 +91,9 @@ final class ViewStoreTests: XCTestCase {
         let e = expectation(description: #function)
         let error = NSError(domain: "test", code: 0, userInfo: nil)
         let refresh = PublishSubject<Void>()
-        let store = ViewStore(provider: { Single<Int>.error(error) }, refresh: refresh)
-        let state = store.create()
+        let state = ViewStoreFactory<Void, Int>
+            .using(provider: { Single<Int>.error(error) }, refresh: refresh, shouldLoadIfEmpty: false)
+            .create()
         
         state.subscribe(onNext: { (viewState) in
             print("*", viewState)

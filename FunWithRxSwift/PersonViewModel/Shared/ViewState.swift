@@ -5,15 +5,28 @@
 
 import Foundation
 
-public enum ViewState<Success, Failure: Swift.Error> {
+public enum ViewState<Success, Failure> {
     
     case empty
     
-    case loading(previous: Result<Success, Failure>?)
+    case loading
     
     case completed(Success)
     
     case failed(Failure)
+}
+
+extension ViewState {
+    
+    public var value: Success? {
+        if case .completed(let value) = self { return value }
+        else { return nil }
+    }
+    
+    public var error: Failure? {
+        if case .failed(let error) = self { return error }
+        else { return nil }
+    }
 }
 
 extension ViewState {
@@ -32,8 +45,8 @@ extension ViewState {
         else { return false }
     }
     
-    public func ifLoading(_ action: (Result<Success, Failure>?) -> ()) {
-        if case .loading(let result) = self { action(result) }
+    public func ifLoading(_ action: () -> ()) {
+        if case .loading = self { action() }
     }
     
     public var isCompleted: Bool {
@@ -55,27 +68,18 @@ extension ViewState {
     }
 }
 
-extension ViewState: Equatable {
-    
-    public static func == (lhs: ViewState<Success, Failure>, rhs: ViewState<Success, Failure>) -> Bool {
-        switch (lhs, rhs) {
-        case (.empty, .empty): return true
-        case (.loading, .loading): return true
-        case (.completed, .completed): return true
-        case (.failed, .failed): return true
-        default: return false
-        }
-    }   
+extension ViewState: Equatable where Success: Equatable, Failure: Equatable {
 }
 
-extension ViewState {
+extension ViewState where Failure: Swift.Error {
     
     public func asResult(previousOnLoading: Bool = true) -> Result<Success, Failure>? {
         switch self {
         case .empty: return nil
-        case .loading(let previous): return previousOnLoading ? previous : nil
+        case .loading: return nil
         case .completed(let success): return .success(success)
         case .failed(let failure): return .failure(failure)
         }
     }
 }
+

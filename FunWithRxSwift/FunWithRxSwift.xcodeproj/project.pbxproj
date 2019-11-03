@@ -13,6 +13,7 @@
 		27343185235341A300C8C416 /* Observable+SystemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27343181235341A200C8C416 /* Observable+SystemExtensions.swift */; };
 		27343186235341A300C8C416 /* Feedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27343182235341A200C8C416 /* Feedbacks.swift */; };
 		2734318C235344C700C8C416 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734318B235344C700C8C416 /* AuthenticationAPI.swift */; };
+		273FFAC0236EF05B0014B2FF /* ViewStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273FFABF236EF05B0014B2FF /* ViewStateRequest.swift */; };
 		274FACB523028ECA0081D97D /* ActivityIdicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274FACB423028ECA0081D97D /* ActivityIdicatorTests.swift */; };
 		274FACB723028ED50081D97D /* ErrorTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274FACB623028ED50081D97D /* ErrorTrackerTests.swift */; };
 		275E5DCC22F56A8F005EF354 /* LoopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275E5DCB22F56A8F005EF354 /* LoopTests.swift */; };
@@ -35,7 +36,7 @@
 		27BCF857235DB3A00026F37F /* FetchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BCF856235DB3A00026F37F /* FetchViewModel.swift */; };
 		27BCF85A235DB4CB0026F37F /* PersonReturningOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BCF859235DB4CB0026F37F /* PersonReturningOutput.swift */; };
 		27BCF85C235DBAB60026F37F /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BCF85B235DBAB60026F37F /* PersonViewModel.swift */; };
-		27BCF85E235DCE3A0026F37F /* ViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BCF85D235DCE3A0026F37F /* ViewStore.swift */; };
+		27BCF85E235DCE3A0026F37F /* ViewStoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BCF85D235DCE3A0026F37F /* ViewStoreFactory.swift */; };
 		27BCF860235DD0B90026F37F /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BCF85F235DD0B90026F37F /* ViewState.swift */; };
 		27BCF886235E23300026F37F /* ViewStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BCF885235E23300026F37F /* ViewStoreTests.swift */; };
 		27D436DD22F981200085F1C6 /* FeedbackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D436DC22F981200085F1C6 /* FeedbackTests.swift */; };
@@ -73,6 +74,7 @@
 		27343181235341A200C8C416 /* Observable+SystemExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+SystemExtensions.swift"; sourceTree = "<group>"; };
 		27343182235341A200C8C416 /* Feedbacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedbacks.swift; sourceTree = "<group>"; };
 		2734318B235344C700C8C416 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAPI.swift; sourceTree = "<group>"; };
+		273FFABF236EF05B0014B2FF /* ViewStateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStateRequest.swift; sourceTree = "<group>"; };
 		274FACB423028ECA0081D97D /* ActivityIdicatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIdicatorTests.swift; sourceTree = "<group>"; };
 		274FACB623028ED50081D97D /* ErrorTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTrackerTests.swift; sourceTree = "<group>"; };
 		275E5DCB22F56A8F005EF354 /* LoopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopTests.swift; sourceTree = "<group>"; };
@@ -96,7 +98,7 @@
 		27BCF856235DB3A00026F37F /* FetchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchViewModel.swift; sourceTree = "<group>"; };
 		27BCF859235DB4CB0026F37F /* PersonReturningOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonReturningOutput.swift; sourceTree = "<group>"; };
 		27BCF85B235DBAB60026F37F /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
-		27BCF85D235DCE3A0026F37F /* ViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStore.swift; sourceTree = "<group>"; };
+		27BCF85D235DCE3A0026F37F /* ViewStoreFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStoreFactory.swift; sourceTree = "<group>"; };
 		27BCF85F235DD0B90026F37F /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		27BCF885235E23300026F37F /* ViewStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStoreTests.swift; sourceTree = "<group>"; };
 		27D436DC22F981200085F1C6 /* FeedbackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTests.swift; sourceTree = "<group>"; };
@@ -197,7 +199,8 @@
 			children = (
 				27BCF856235DB3A00026F37F /* FetchViewModel.swift */,
 				27BCF85F235DD0B90026F37F /* ViewState.swift */,
-				27BCF85D235DCE3A0026F37F /* ViewStore.swift */,
+				273FFABF236EF05B0014B2FF /* ViewStateRequest.swift */,
+				27BCF85D235DCE3A0026F37F /* ViewStoreFactory.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -533,11 +536,12 @@
 				27E73FED22E162F7005BAAB1 /* ViewController.swift in Sources */,
 				27343186235341A300C8C416 /* Feedbacks.swift in Sources */,
 				2774A7E7235C7CEE0056372A /* PersonFetchViewModel.swift in Sources */,
-				27BCF85E235DCE3A0026F37F /* ViewStore.swift in Sources */,
+				27BCF85E235DCE3A0026F37F /* ViewStoreFactory.swift in Sources */,
 				2774A7EB235C7DDC0056372A /* PersonDetailsFactory.swift in Sources */,
 				2774A7F1235C80ED0056372A /* PersonEditViewModel.swift in Sources */,
 				27BCF860235DD0B90026F37F /* ViewState.swift in Sources */,
 				27BCF85C235DBAB60026F37F /* PersonViewModel.swift in Sources */,
+				273FFAC0236EF05B0014B2FF /* ViewStateRequest.swift in Sources */,
 				2734318C235344C700C8C416 /* AuthenticationAPI.swift in Sources */,
 				279E30A52357395C00E453C0 /* LoginVM+Fun.swift in Sources */,
 				27343183235341A300C8C416 /* ErrorTracker.swift in Sources */,
