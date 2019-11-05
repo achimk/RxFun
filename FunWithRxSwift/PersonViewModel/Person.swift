@@ -12,6 +12,11 @@ struct PersonId {
     var value: String
 }
 
+struct PersonItem {
+    var id: PersonId
+    var initials: String
+}
+
 struct Person {
     var id: PersonId
     var name: String

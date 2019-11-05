@@ -9,4 +9,6 @@ import RxCocoa
 
 protocol PersonAPI {
     func person(for id: PersonId) -> Single<Person>
+    func allPersons() -> Single<[PersonItem]>
+    func update(name: String, surname: String, for id: PersonId) -> Single<Person>
 }

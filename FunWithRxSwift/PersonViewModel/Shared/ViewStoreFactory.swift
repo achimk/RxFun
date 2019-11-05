@@ -14,6 +14,8 @@ public struct ViewStoreFactory<Request, Response> {
     public enum Behaviour {
         case waitIfEmpty
         case loadIfEmpty(Request)
+        case completed(Response)
+        case failed(Swift.Error)
     }
     
     internal typealias Feedback = (ObservableSchedulerContext<State>) -> Observable<Action>
@@ -47,8 +49,15 @@ public struct ViewStoreFactory<Request, Response> {
         let feedbackUI = prepareUIFeedback(refresh: refresh)
         let feedbackEffect = prepareEffectFeedback(behaviour: behaviour, provider: provider)
         
+        let state: ViewState<Response, Swift.Error>
+        switch behaviour {
+        case .completed(let response): state = .completed(response)
+        case .failed(let error): state = .failed(error)
+        default: state = .empty
+        }
+        
         return Observable.system(
-            initialState: .init(),
+            initialState: .init(state: state),
             reduce: reduce,
             scheduler: scheduler,
             scheduledFeedback: feedbackUI, feedbackEffect)

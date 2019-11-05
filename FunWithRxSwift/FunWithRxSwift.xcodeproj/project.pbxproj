@@ -41,6 +41,8 @@
 		27BCF886235E23300026F37F /* ViewStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BCF885235E23300026F37F /* ViewStoreTests.swift */; };
 		27D436DD22F981200085F1C6 /* FeedbackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D436DC22F981200085F1C6 /* FeedbackTests.swift */; };
 		27DA197622F98B2300DC69FC /* SchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA197522F98B2300DC69FC /* SchedulerTests.swift */; };
+		27DD732B237052C6004FEB3D /* PersonItemObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DD732A237052C6004FEB3D /* PersonItemObservable.swift */; };
+		27DD732D23705389004FEB3D /* PersonDetailsObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DD732C23705389004FEB3D /* PersonDetailsObservable.swift */; };
 		27E73FEB22E162F7005BAAB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E73FEA22E162F7005BAAB1 /* AppDelegate.swift */; };
 		27E73FED22E162F7005BAAB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E73FEC22E162F7005BAAB1 /* ViewController.swift */; };
 		27E73FF022E162F7005BAAB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E73FEE22E162F7005BAAB1 /* Main.storyboard */; };
@@ -103,6 +105,8 @@
 		27BCF885235E23300026F37F /* ViewStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStoreTests.swift; sourceTree = "<group>"; };
 		27D436DC22F981200085F1C6 /* FeedbackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTests.swift; sourceTree = "<group>"; };
 		27DA197522F98B2300DC69FC /* SchedulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerTests.swift; sourceTree = "<group>"; };
+		27DD732A237052C6004FEB3D /* PersonItemObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonItemObservable.swift; sourceTree = "<group>"; };
+		27DD732C23705389004FEB3D /* PersonDetailsObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsObservable.swift; sourceTree = "<group>"; };
 		27E73FE722E162F7005BAAB1 /* FunWithRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunWithRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E73FEA22E162F7005BAAB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27E73FEC22E162F7005BAAB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 		2774A7E1235C7BFF0056372A /* PersonViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				27DD7329237052B8004FEB3D /* Observer */,
 				27BCF855235DB3900026F37F /* Shared */,
 				27BCF852235DB1FB0026F37F /* ComposeByReturningVM */,
 				27BCF858235DB4AA0026F37F /* ComposedByRetutningOutput */,
@@ -222,6 +227,15 @@
 				27343181235341A200C8C416 /* Observable+SystemExtensions.swift */,
 			);
 			path = External;
+			sourceTree = "<group>";
+		};
+		27DD7329237052B8004FEB3D /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				27DD732A237052C6004FEB3D /* PersonItemObservable.swift */,
+				27DD732C23705389004FEB3D /* PersonDetailsObservable.swift */,
+			);
+			path = Observer;
 			sourceTree = "<group>";
 		};
 		27E73FDE22E162F7005BAAB1 = {
@@ -534,8 +548,10 @@
 				2774A7E5235C7CA20056372A /* Person.swift in Sources */,
 				27343184235341A300C8C416 /* ActivityIndicator.swift in Sources */,
 				27E73FED22E162F7005BAAB1 /* ViewController.swift in Sources */,
+				27DD732D23705389004FEB3D /* PersonDetailsObservable.swift in Sources */,
 				27343186235341A300C8C416 /* Feedbacks.swift in Sources */,
 				2774A7E7235C7CEE0056372A /* PersonFetchViewModel.swift in Sources */,
+				27DD732B237052C6004FEB3D /* PersonItemObservable.swift in Sources */,
 				27BCF85E235DCE3A0026F37F /* ViewStoreFactory.swift in Sources */,
 				2774A7EB235C7DDC0056372A /* PersonDetailsFactory.swift in Sources */,
 				2774A7F1235C80ED0056372A /* PersonEditViewModel.swift in Sources */,
