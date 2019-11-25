@@ -44,7 +44,7 @@ func validatePerson(age: UInt?) -> Result<UInt, PersonValidationError> {
     return value.map(Result.success) ?? .failure(.invalidAge)
 }
 
-func validatePerson(_ unvalidated: UnvalidatedPerson) -> ValidatedResult<Person, [PersonValidationKey: PersonValidationError]> {
+func validatePerson(_ unvalidated: UnvalidatedPerson, id: PersonId) -> ValidatedResult<Person, [PersonValidationKey: PersonValidationError]> {
     
     let nameResult = validatePerson(name: unvalidated.name)
     let surnameResult = validatePerson(surname: unvalidated.surname)
@@ -53,7 +53,7 @@ func validatePerson(_ unvalidated: UnvalidatedPerson) -> ValidatedResult<Person,
     do {
         
         let person = Person.init(
-            id: unvalidated.id,
+            id: id,
             name: try nameResult.get(),
             surname: try surnameResult.get(),
             age: try ageResult.get())
