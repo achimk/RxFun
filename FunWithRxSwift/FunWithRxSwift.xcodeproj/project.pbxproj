@@ -36,6 +36,7 @@
 		279FD068238BE8DD00289AD0 /* EmailAddressChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FD067238BE8DD00289AD0 /* EmailAddressChange.swift */; };
 		279FD06A238BEA1F00289AD0 /* PersonDetailsErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FD069238BEA1F00289AD0 /* PersonDetailsErrors.swift */; };
 		279FD06C238BECD000289AD0 /* PersonFormBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FD06B238BECD000289AD0 /* PersonFormBuilder.swift */; };
+		279FD06E238BF18900289AD0 /* PersonFormAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FD06D238BF18900289AD0 /* PersonFormAPI.swift */; };
 		27A14AA222E72B7F00491CAB /* DispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A14AA122E72B7F00491CAB /* DispatchTests.swift */; };
 		27A14B0F22E7436900491CAB /* ShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A14B0E22E7436900491CAB /* ShareTests.swift */; };
 		27A14B5122E769F200491CAB /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A14B5022E769F200491CAB /* CacheTests.swift */; };
@@ -121,6 +122,7 @@
 		279FD067238BE8DD00289AD0 /* EmailAddressChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddressChange.swift; sourceTree = "<group>"; };
 		279FD069238BEA1F00289AD0 /* PersonDetailsErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsErrors.swift; sourceTree = "<group>"; };
 		279FD06B238BECD000289AD0 /* PersonFormBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFormBuilder.swift; sourceTree = "<group>"; };
+		279FD06D238BF18900289AD0 /* PersonFormAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFormAPI.swift; sourceTree = "<group>"; };
 		27A14AA122E72B7F00491CAB /* DispatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchTests.swift; sourceTree = "<group>"; };
 		27A14B0E22E7436900491CAB /* ShareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTests.swift; sourceTree = "<group>"; };
 		27A14B5022E769F200491CAB /* CacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				279FD060238BE41E00289AD0 /* Form */,
 				27CE5C33238AABE000784B5B /* Domain */,
 				27CE5C27238A8F4A00784B5B /* PersonAPI.swift */,
+				279FD06D238BF18900289AD0 /* PersonFormAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -684,6 +687,7 @@
 				27E04E63238BDC3500BB1459 /* StubPersonDetailsLocalizer.swift in Sources */,
 				279FD06C238BECD000289AD0 /* PersonFormBuilder.swift in Sources */,
 				27343185235341A300C8C416 /* Observable+SystemExtensions.swift in Sources */,
+				279FD06E238BF18900289AD0 /* PersonFormAPI.swift in Sources */,
 				2796B7CE238BB8E600794ED6 /* PersonDetailsViewModel.swift in Sources */,
 				27CE5C39238AAC7200784B5B /* UnvalidatedAddress.swift in Sources */,
 				27E73FEB22E162F7005BAAB1 /* AppDelegate.swift in Sources */,
