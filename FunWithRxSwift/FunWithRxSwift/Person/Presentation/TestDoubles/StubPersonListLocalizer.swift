@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct StubPersonDetailsLocalizer: PersonDetailsLocalizing {
+struct StubPersonListLocalizer: PersonListLocalizing {
     
     var localizedUnexpectedError: String {
         return "Unexpected error occured!"

@@ -42,7 +42,7 @@ struct PersonDetailsViewModel {
         output.lastError = state
             .asObservable()
             .compactMap { state in
-                if case .failure = state { return localizer.localizedErrorMessage }
+                if case .failure = state { return localizer.localizedUnexpectedError }
                 else { return nil }
             }
             .asDriver(onErrorDriveWith: .empty())

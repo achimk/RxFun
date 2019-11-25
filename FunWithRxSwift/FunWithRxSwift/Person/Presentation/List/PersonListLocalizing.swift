@@ -5,7 +5,7 @@
 
 import Foundation
 
-protocol PersonDetailsLocalizing {
+protocol PersonListLocalizing {
     
     var localizedUnexpectedError: String { get }
 }
