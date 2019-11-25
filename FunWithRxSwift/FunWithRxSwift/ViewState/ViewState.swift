@@ -5,9 +5,13 @@
 
 import Foundation
 
-enum ViewState<Success, Failure> {
+indirect enum ViewState<Success, Failure> {
     case initial
-    case loading
+    case loading(previous: ViewState<Success, Failure>)
     case success(Success)
     case failure(Failure)
+}
+
+extension ViewState {
+    
 }

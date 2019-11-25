@@ -18,6 +18,10 @@
 		2769418C22F043ED00627BCB /* DebounceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2769418B22F043ED00627BCB /* DebounceTests.swift */; };
 		2796B7C5238BB46E00794ED6 /* ValidatedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7C4238BB46E00794ED6 /* ValidatedResult.swift */; };
 		2796B7C7238BB4DE00794ED6 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7C6238BB4DE00794ED6 /* Result+Extensions.swift */; };
+		2796B7CC238BB8DE00794ED6 /* PersonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7CB238BB8DE00794ED6 /* PersonListViewModel.swift */; };
+		2796B7CE238BB8E600794ED6 /* PersonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7CD238BB8E600794ED6 /* PersonDetailsViewModel.swift */; };
+		2796B7D0238BB94C00794ED6 /* PersonListObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7CF238BB94C00794ED6 /* PersonListObservable.swift */; };
+		2796B7D2238BB95900794ED6 /* PersonDetailsObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7D1238BB95900794ED6 /* PersonDetailsObservable.swift */; };
 		27A14AA222E72B7F00491CAB /* DispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A14AA122E72B7F00491CAB /* DispatchTests.swift */; };
 		27A14B0F22E7436900491CAB /* ShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A14B0E22E7436900491CAB /* ShareTests.swift */; };
 		27A14B5122E769F200491CAB /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A14B5022E769F200491CAB /* CacheTests.swift */; };
@@ -76,6 +80,10 @@
 		2769418B22F043ED00627BCB /* DebounceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebounceTests.swift; sourceTree = "<group>"; };
 		2796B7C4238BB46E00794ED6 /* ValidatedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatedResult.swift; sourceTree = "<group>"; };
 		2796B7C6238BB4DE00794ED6 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
+		2796B7CB238BB8DE00794ED6 /* PersonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModel.swift; sourceTree = "<group>"; };
+		2796B7CD238BB8E600794ED6 /* PersonDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewModel.swift; sourceTree = "<group>"; };
+		2796B7CF238BB94C00794ED6 /* PersonListObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListObservable.swift; sourceTree = "<group>"; };
+		2796B7D1238BB95900794ED6 /* PersonDetailsObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsObservable.swift; sourceTree = "<group>"; };
 		27A14AA122E72B7F00491CAB /* DispatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchTests.swift; sourceTree = "<group>"; };
 		27A14B0E22E7436900491CAB /* ShareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTests.swift; sourceTree = "<group>"; };
 		27A14B5022E769F200491CAB /* CacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
@@ -153,6 +161,33 @@
 			path = Commons;
 			sourceTree = "<group>";
 		};
+		2796B7C8238BB8A200794ED6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2796B7CA238BB8C200794ED6 /* Details */,
+				2796B7C9238BB8B500794ED6 /* List */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2796B7C9238BB8B500794ED6 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				2796B7CF238BB94C00794ED6 /* PersonListObservable.swift */,
+				2796B7CB238BB8DE00794ED6 /* PersonListViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		2796B7CA238BB8C200794ED6 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				2796B7D1238BB95900794ED6 /* PersonDetailsObservable.swift */,
+				2796B7CD238BB8E600794ED6 /* PersonDetailsViewModel.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		27CE5C22238A8ECE00784B5B /* ViewState */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +199,7 @@
 		27CE5C25238A8F3D00784B5B /* Person */ = {
 			isa = PBXGroup;
 			children = (
+				2796B7C8238BB8A200794ED6 /* Presentation */,
 				27CE5C26238A8F4300784B5B /* API */,
 			);
 			path = Person;
@@ -514,6 +550,7 @@
 			files = (
 				27343184235341A300C8C416 /* ActivityIndicator.swift in Sources */,
 				27CE5C35238AABEE00784B5B /* PersonId.swift in Sources */,
+				2796B7CC238BB8DE00794ED6 /* PersonListViewModel.swift in Sources */,
 				27CE5C37238AAC4F00784B5B /* UnvalidatedPerson.swift in Sources */,
 				27CE5C24238A8ED900784B5B /* ViewState.swift in Sources */,
 				2796B7C7238BB4DE00794ED6 /* Result+Extensions.swift in Sources */,
@@ -521,16 +558,19 @@
 				2796B7C5238BB46E00794ED6 /* ValidatedResult.swift in Sources */,
 				27CE5C3D238AAF0800784B5B /* AddressValidator.swift in Sources */,
 				27CE5C28238A8F4A00784B5B /* PersonAPI.swift in Sources */,
+				2796B7D2238BB95900794ED6 /* PersonDetailsObservable.swift in Sources */,
 				27343186235341A300C8C416 /* Feedbacks.swift in Sources */,
 				27343183235341A300C8C416 /* ErrorTracker.swift in Sources */,
 				27CE5C2A238A8F6300784B5B /* Person.swift in Sources */,
 				27343185235341A300C8C416 /* Observable+SystemExtensions.swift in Sources */,
+				2796B7CE238BB8E600794ED6 /* PersonDetailsViewModel.swift in Sources */,
 				27CE5C39238AAC7200784B5B /* UnvalidatedAddress.swift in Sources */,
 				27E73FEB22E162F7005BAAB1 /* AppDelegate.swift in Sources */,
 				27CE5C2E238A901700784B5B /* PostalAddress.swift in Sources */,
 				27CE5C30238A90C600784B5B /* AddressInfo.swift in Sources */,
 				27CE5C2C238A8FF700784B5B /* PersonDetails.swift in Sources */,
 				27CE5C3B238AAC9F00784B5B /* PersonValidator.swift in Sources */,
+				2796B7D0238BB94C00794ED6 /* PersonListObservable.swift in Sources */,
 				27CE5C32238A9E4300784B5B /* EmailAddress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
