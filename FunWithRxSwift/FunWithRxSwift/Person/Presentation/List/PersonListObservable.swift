@@ -12,10 +12,10 @@ final class PersonListObservable: ObservableConvertibleType {
         case refresh
     }
     
-    private let state: ViewDataStateObservable<Action, [Person]>
+    private let state: ResultStateObservable<Action, [Person]>
     
     init(api: PersonAPI) {
-        self.state = ViewDataStateObservable<Action, [Person]>.init(reducer: { (action) -> Single<[Person]> in
+        self.state = ResultStateObservable<Action, [Person]>.init(reducer: { (action) -> Single<[Person]> in
             switch action {
             case .refresh:
                 return api.allPersons()
@@ -31,7 +31,7 @@ final class PersonListObservable: ObservableConvertibleType {
         state.dispatch(action)
     }
     
-    func asObservable() -> Observable<ViewDataState<[Person], Swift.Error>> {
+    func asObservable() -> Observable<ResultState<[Person], Swift.Error>> {
         return .empty()
     }
 }

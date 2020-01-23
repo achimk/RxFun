@@ -27,7 +27,7 @@
 		2796B7CE238BB8E600794ED6 /* PersonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7CD238BB8E600794ED6 /* PersonDetailsViewModel.swift */; };
 		2796B7D0238BB94C00794ED6 /* PersonListObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7CF238BB94C00794ED6 /* PersonListObservable.swift */; };
 		2796B7D2238BB95900794ED6 /* PersonDetailsObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7D1238BB95900794ED6 /* PersonDetailsObservable.swift */; };
-		2796B7D4238BBE9900794ED6 /* ViewDataStateObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7D3238BBE9900794ED6 /* ViewDataStateObservable.swift */; };
+		2796B7D4238BBE9900794ED6 /* ResultStateObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7D3238BBE9900794ED6 /* ResultStateObservable.swift */; };
 		2796B7D8238BC70000794ED6 /* EmptyPersonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7D7238BC70000794ED6 /* EmptyPersonDetailsViewModel.swift */; };
 		2796B7E2238BC8E500794ED6 /* DisplayPersonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7E1238BC8E500794ED6 /* DisplayPersonDetailsViewModel.swift */; };
 		2796B7E4238BC91200794ED6 /* DisplayPersonDetailsIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7E3238BC91200794ED6 /* DisplayPersonDetailsIO.swift */; };
@@ -71,7 +71,7 @@
 		27E04E69238BDE8000BB1459 /* PersonListLocalizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E04E68238BDE8000BB1459 /* PersonListLocalizing.swift */; };
 		27E04E6B238BDEAD00BB1459 /* StubPersonListLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E04E6A238BDEAD00BB1459 /* StubPersonListLocalizer.swift */; };
 		27E04E6D238BE04000BB1459 /* PersonListViewDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E04E6C238BE04000BB1459 /* PersonListViewDataFactory.swift */; };
-		27E1254423D8B540007CCFF1 /* ViewDataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E1254323D8B540007CCFF1 /* ViewDataState.swift */; };
+		27E1254423D8B540007CCFF1 /* ResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E1254323D8B540007CCFF1 /* ResultState.swift */; };
 		27E1256F23D9ADDD007CCFF1 /* ViewDataStateObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E1256E23D9ADDD007CCFF1 /* ViewDataStateObservableTests.swift */; };
 		27E73FEB22E162F7005BAAB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E73FEA22E162F7005BAAB1 /* AppDelegate.swift */; };
 		27E73FED22E162F7005BAAB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E73FEC22E162F7005BAAB1 /* ViewController.swift */; };
@@ -120,7 +120,7 @@
 		2796B7CD238BB8E600794ED6 /* PersonDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewModel.swift; sourceTree = "<group>"; };
 		2796B7CF238BB94C00794ED6 /* PersonListObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListObservable.swift; sourceTree = "<group>"; };
 		2796B7D1238BB95900794ED6 /* PersonDetailsObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsObservable.swift; sourceTree = "<group>"; };
-		2796B7D3238BBE9900794ED6 /* ViewDataStateObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataStateObservable.swift; sourceTree = "<group>"; };
+		2796B7D3238BBE9900794ED6 /* ResultStateObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultStateObservable.swift; sourceTree = "<group>"; };
 		2796B7D7238BC70000794ED6 /* EmptyPersonDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPersonDetailsViewModel.swift; sourceTree = "<group>"; };
 		2796B7E1238BC8E500794ED6 /* DisplayPersonDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPersonDetailsViewModel.swift; sourceTree = "<group>"; };
 		2796B7E3238BC91200794ED6 /* DisplayPersonDetailsIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPersonDetailsIO.swift; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 		27E04E68238BDE8000BB1459 /* PersonListLocalizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListLocalizing.swift; sourceTree = "<group>"; };
 		27E04E6A238BDEAD00BB1459 /* StubPersonListLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubPersonListLocalizer.swift; sourceTree = "<group>"; };
 		27E04E6C238BE04000BB1459 /* PersonListViewDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewDataFactory.swift; sourceTree = "<group>"; };
-		27E1254323D8B540007CCFF1 /* ViewDataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataState.swift; sourceTree = "<group>"; };
+		27E1254323D8B540007CCFF1 /* ResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultState.swift; sourceTree = "<group>"; };
 		27E1256E23D9ADDD007CCFF1 /* ViewDataStateObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataStateObservableTests.swift; sourceTree = "<group>"; };
 		27E73FE722E162F7005BAAB1 /* FunWithRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunWithRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E73FEA22E162F7005BAAB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -229,8 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				27CE5C23238A8ED900784B5B /* ViewState.swift */,
-				27E1254323D8B540007CCFF1 /* ViewDataState.swift */,
-				2796B7D3238BBE9900794ED6 /* ViewDataStateObservable.swift */,
+				27E1254323D8B540007CCFF1 /* ResultState.swift */,
+				2796B7D3238BBE9900794ED6 /* ResultStateObservable.swift */,
 				2796B7C4238BB46E00794ED6 /* ValidatedResult.swift */,
 				2796B7C6238BB4DE00794ED6 /* Result+Extensions.swift */,
 			);
@@ -697,7 +697,7 @@
 				27E04E6D238BE04000BB1459 /* PersonListViewDataFactory.swift in Sources */,
 				27E73FED22E162F7005BAAB1 /* ViewController.swift in Sources */,
 				2796B7C5238BB46E00794ED6 /* ValidatedResult.swift in Sources */,
-				27E1254423D8B540007CCFF1 /* ViewDataState.swift in Sources */,
+				27E1254423D8B540007CCFF1 /* ResultState.swift in Sources */,
 				27E04E60238BDBF000BB1459 /* PersonDetailsLocalizing.swift in Sources */,
 				2796B7E8238BCA5500794ED6 /* PersonListWireframe.swift in Sources */,
 				276A7C3323905BBD00B0A2C8 /* constant.swift in Sources */,
@@ -727,7 +727,7 @@
 				27E73FEB22E162F7005BAAB1 /* AppDelegate.swift in Sources */,
 				27CE5C2E238A901700784B5B /* PostalAddress.swift in Sources */,
 				27CE5C30238A90C600784B5B /* AddressInfo.swift in Sources */,
-				2796B7D4238BBE9900794ED6 /* ViewDataStateObservable.swift in Sources */,
+				2796B7D4238BBE9900794ED6 /* ResultStateObservable.swift in Sources */,
 				2796B7E4238BC91200794ED6 /* DisplayPersonDetailsIO.swift in Sources */,
 				27CE5C2C238A8FF700784B5B /* PersonDetails.swift in Sources */,
 				27CE5C3B238AAC9F00784B5B /* PersonValidator.swift in Sources */,

@@ -13,10 +13,10 @@ final class PersonDetailsObservable: ObservableConvertibleType {
         case update(UnvalidatedPerson, UnvalidatedAddress)
     }
     
-    private let state: ViewDataStateObservable<Action, PersonDetails>
+    private let state: ResultStateObservable<Action, PersonDetails>
     
     init(api: PersonAPI, id: PersonId) {
-        self.state = ViewDataStateObservable<Action, PersonDetails> { (action) -> Single<PersonDetails> in
+        self.state = ResultStateObservable<Action, PersonDetails> { (action) -> Single<PersonDetails> in
             switch action {
             case .refresh:
                 return api.person(with: id)
@@ -34,7 +34,7 @@ final class PersonDetailsObservable: ObservableConvertibleType {
         state.dispatch(action)
     }
     
-    func asObservable() -> Observable<ViewDataState<PersonDetails, Swift.Error>> {
+    func asObservable() -> Observable<ResultState<PersonDetails, Swift.Error>> {
         return state.asObservable()
     }
 }

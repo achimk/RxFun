@@ -5,14 +5,14 @@
 
 import Foundation
 
-indirect enum ViewDataState<Success, Failure> {
+indirect enum ResultState<Success, Failure> {
     case initial
-    case loading(previous: ViewDataState<Success, Failure>)
+    case loading(previous: ResultState<Success, Failure>)
     case success(Success)
     case failure(Failure)
 }
 
-extension ViewDataState {
+extension ResultState {
     
     var isInitial: Bool {
         if case .initial = self { return true }
@@ -51,7 +51,7 @@ extension ViewDataState {
     }
 }
 
-extension ViewDataState {
+extension ResultState {
     
     var value: Success? {
         switch self {
@@ -89,7 +89,7 @@ extension ViewDataState {
         }
     }
     
-    var lastState: ViewDataState<Success, Failure> {
+    var lastState: ResultState<Success, Failure> {
         switch self {
         case .initial: return self
         case .loading(let previous): return previous.lastState
@@ -108,7 +108,7 @@ extension ViewDataState {
     }
 }
 
-extension ViewDataState where Failure: Swift.Error {
+extension ResultState where Failure: Swift.Error {
     
     var result: Result<Success, Failure>? {
         switch self {
@@ -129,9 +129,9 @@ extension ViewDataState where Failure: Swift.Error {
     }
 }
 
-extension ViewDataState: Equatable where Success: Equatable {
+extension ResultState: Equatable where Success: Equatable {
     
-    static func ==(lhs: ViewDataState<Success, Failure>, rhs: ViewDataState<Success, Failure>) -> Bool {
+    static func ==(lhs: ResultState<Success, Failure>, rhs: ResultState<Success, Failure>) -> Bool {
         switch (lhs, rhs) {
         case (.initial, .initial): return true
         case let (.loading(l), .loading(r)): return l == r

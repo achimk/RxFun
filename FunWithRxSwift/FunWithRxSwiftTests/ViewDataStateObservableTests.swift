@@ -9,7 +9,7 @@ import RxCocoa
 import RxTest
 @testable import FunWithRxSwift
 
-final class ViewDataStateObservableTests: XCTestCase {
+final class ResultStateObservableTests: XCTestCase {
     
     enum Error: Swift.Error {
         case test
@@ -21,8 +21,8 @@ final class ViewDataStateObservableTests: XCTestCase {
         case failed(Swift.Error)
     }
     
-    typealias State = ViewDataState<Int, Swift.Error>
-    typealias StateObservable = ViewDataStateObservable<Action, Int>
+    typealias State = ResultState<Int, Swift.Error>
+    typealias StateObservable = ResultStateObservable<Action, Int>
     
     private var bag = DisposeBag()
     

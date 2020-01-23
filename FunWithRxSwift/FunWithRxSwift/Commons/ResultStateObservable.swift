@@ -7,9 +7,9 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class ViewDataStateObservable<Request, Response>: ObservableConvertibleType {
+final class ResultStateObservable<Request, Response>: ObservableConvertibleType {
 
-    typealias State = ViewDataState<Response, Swift.Error>
+    typealias State = ResultState<Response, Swift.Error>
     
     private let dispatcher = PublishSubject<(Request, Bool)>()
     private let state = BehaviorRelay<State>(value: .initial)
@@ -29,7 +29,7 @@ final class ViewDataStateObservable<Request, Response>: ObservableConvertibleTyp
     }
 }
 
-extension ViewDataStateObservable {
+extension ResultStateObservable {
     
     private func prepareReduce(
         scheduler: SchedulerType,
@@ -63,7 +63,7 @@ extension ViewDataStateObservable {
     }
 }
 
-extension ViewDataStateObservable where Request == Void {
+extension ResultStateObservable where Request == Void {
     
     func refresh(force: Bool = false) {
         dispatch((), force: force)
