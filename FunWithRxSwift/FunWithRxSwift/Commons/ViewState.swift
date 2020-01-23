@@ -5,11 +5,11 @@
 
 import Foundation
 
-indirect enum ViewState<Success, Failure> {
+indirect enum ViewState {
     case initial
-    case loading(previous: ViewState<Success, Failure>)
-    case success(Success)
-    case failure(Failure)
+    case loading(previous: ViewState)
+    case success
+    case failure
 }
 
 extension ViewState {
@@ -33,4 +33,22 @@ extension ViewState {
         if case .failure = self { return true }
         else { return false }
     }
+    
+    func onInitial(_ action: () -> ()) {
+        if case .initial = self { action() }
+    }
+    
+    func onLoading(_ action: (Self) -> ()) {
+        if case .loading(let previous) = self { action(previous) }
+    }
+    
+    func onSuccess(_ action: () -> ()) {
+        if case .success = self { action() }
+    }
+    
+    func onFailure(_ action: () -> ()) {
+        if case .failure = self { action() }
+    }
 }
+
+extension ViewState: Equatable { }
