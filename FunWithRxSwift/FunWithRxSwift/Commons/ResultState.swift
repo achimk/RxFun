@@ -98,7 +98,7 @@ extension ResultState {
         }
     }
     
-    var rawValue: ViewState {
+    var rawValue: RawResultState {
         switch self {
         case .initial: return .initial
         case .loading(let previous): return .loading(previous: previous.rawValue)

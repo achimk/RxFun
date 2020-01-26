@@ -40,7 +40,7 @@
 		27A7937422FC593D00FF44C7 /* SingleInFlatMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7937322FC593D00FF44C7 /* SingleInFlatMapTests.swift */; };
 		27A7937622FC693000FF44C7 /* QueueDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7937522FC693000FF44C7 /* QueueDispatcherTests.swift */; };
 		27A7939A22FC721700FF44C7 /* SingleZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7939922FC721700FF44C7 /* SingleZipTests.swift */; };
-		27CE5C24238A8ED900784B5B /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE5C23238A8ED900784B5B /* ViewState.swift */; };
+		27CE5C24238A8ED900784B5B /* RawResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE5C23238A8ED900784B5B /* RawResultState.swift */; };
 		27CE5C28238A8F4A00784B5B /* PersonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE5C27238A8F4A00784B5B /* PersonAPI.swift */; };
 		27CE5C2A238A8F6300784B5B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE5C29238A8F6300784B5B /* Person.swift */; };
 		27CE5C2C238A8FF700784B5B /* PersonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE5C2B238A8FF700784B5B /* PersonDetails.swift */; };
@@ -121,7 +121,7 @@
 		27A7937322FC593D00FF44C7 /* SingleInFlatMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleInFlatMapTests.swift; sourceTree = "<group>"; };
 		27A7937522FC693000FF44C7 /* QueueDispatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueDispatcherTests.swift; sourceTree = "<group>"; };
 		27A7939922FC721700FF44C7 /* SingleZipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleZipTests.swift; sourceTree = "<group>"; };
-		27CE5C23238A8ED900784B5B /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		27CE5C23238A8ED900784B5B /* RawResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawResultState.swift; sourceTree = "<group>"; };
 		27CE5C27238A8F4A00784B5B /* PersonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAPI.swift; sourceTree = "<group>"; };
 		27CE5C29238A8F6300784B5B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		27CE5C2B238A8FF700784B5B /* PersonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetails.swift; sourceTree = "<group>"; };
@@ -203,6 +203,13 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		271648DE23DD9BAC003D89EC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		276A7C2F23905B8D00B0A2C8 /* Functional */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +224,7 @@
 		2796B79D238BB41200794ED6 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				27CE5C23238A8ED900784B5B /* ViewState.swift */,
+				27CE5C23238A8ED900784B5B /* RawResultState.swift */,
 				27E1254323D8B540007CCFF1 /* ResultState.swift */,
 				2796B7D3238BBE9900794ED6 /* ResultStateObservable.swift */,
 				2796B7C4238BB46E00794ED6 /* ValidatedResult.swift */,
@@ -263,6 +270,7 @@
 		27CE5C25238A8F3D00784B5B /* Person */ = {
 			isa = PBXGroup;
 			children = (
+				271648DE23DD9BAC003D89EC /* UI */,
 				2796B7C8238BB8A200794ED6 /* Presentation */,
 				27CE5C26238A8F4300784B5B /* API */,
 			);
@@ -636,7 +644,7 @@
 				27E04E65238BDD4600BB1459 /* PersonListIO.swift in Sources */,
 				276A7C392390652E00B0A2C8 /* with.swift in Sources */,
 				27E04E67238BDD8B00BB1459 /* PersonListViewData.swift in Sources */,
-				27CE5C24238A8ED900784B5B /* ViewState.swift in Sources */,
+				27CE5C24238A8ED900784B5B /* RawResultState.swift in Sources */,
 				271648DD23DD98AE003D89EC /* Gender.swift in Sources */,
 				27E04E69238BDE8000BB1459 /* PersonListLocalizing.swift in Sources */,
 				279FD06A238BEA1F00289AD0 /* PersonErrors.swift in Sources */,

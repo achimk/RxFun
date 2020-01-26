@@ -5,14 +5,46 @@
 
 import Foundation
 
-indirect enum ViewState {
+indirect enum RawResultState {
     case initial
-    case loading(previous: ViewState)
+    case loading(previous: RawResultState)
     case success
     case failure
 }
 
-extension ViewState {
+extension RawResultState: CustomStringConvertible {
+    
+    var description: String {
+        switch self {
+        case .initial: return "initial"
+        case .loading: return "loading"
+        case .success: return "success"
+        case .failure: return "failure"
+        }
+    }
+}
+
+extension RawResultState: RawRepresentable {
+    
+    var rawValue: String { description }
+    
+    init?(rawValue: String) {
+        switch rawValue {
+        case "initial": self = .initial
+        case "loading": self = .loading(previous: .initial)
+        case "success": self = .success
+        case "failure": self = .failure
+        default: return nil
+        }
+    }
+}
+
+extension RawResultState {
+    
+    var previous: RawResultState? {
+        if case .loading(let state) = self { return state }
+        else { return nil }
+    }
     
     var isInitial: Bool {
         if case .initial = self { return true }
@@ -51,4 +83,4 @@ extension ViewState {
     }
 }
 
-extension ViewState: Equatable { }
+extension RawResultState: Equatable { }
