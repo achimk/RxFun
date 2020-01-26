@@ -6,15 +6,6 @@
 import Foundation
 
 struct PersonForm {
-    let personChange: PersonChange
-    let postalAddressChange: PostalAddressChange
-    let emailAddressChange: EmailAddressChange
-    let errors: PersonDetailsErrors
-}
-
-extension PersonForm {
-    
-    var isModified: Bool {
-        return personChange.isModified || postalAddressChange.isModified || emailAddressChange.isModified
-    }
+    let change: PersonChange
+    let errors: PersonErrors
 }

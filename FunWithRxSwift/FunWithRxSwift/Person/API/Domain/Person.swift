@@ -10,4 +10,5 @@ struct Person {
     var name: String
     var surname: String
     var age: UInt
+    var gender: Gender
 }

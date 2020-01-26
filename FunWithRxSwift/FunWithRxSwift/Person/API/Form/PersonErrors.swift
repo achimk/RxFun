@@ -5,8 +5,7 @@
 
 import Foundation
 
-struct PersonDetailsErrors {
+struct PersonErrors {
     var person: [PersonValidationKey: PersonValidationError] = [:]
-    var address: [AddressValidationKey: AddressValidationError] = [:]
-    var hasErrors: Bool { return !person.isEmpty || !address.isEmpty }
+    var hasErrors: Bool { return !person.isEmpty }
 }

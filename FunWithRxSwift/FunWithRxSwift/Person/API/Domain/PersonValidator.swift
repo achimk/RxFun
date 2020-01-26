@@ -9,12 +9,14 @@ enum PersonValidationKey: String {
     case name
     case surname
     case age
+    case gender
 }
 
 enum PersonValidationError: Swift.Error {
     case invalidName
     case invalidSurname
     case invalidAge
+    case invalidGender
 }
 
 func validatePerson(name: String?) -> Result<String, PersonValidationError> {
@@ -44,11 +46,16 @@ func validatePerson(age: UInt?) -> Result<UInt, PersonValidationError> {
     return value.map(Result.success) ?? .failure(.invalidAge)
 }
 
+func validatePerson(gender: Gender?) -> Result<Gender, PersonValidationError> {
+    return gender.map(Result.success) ?? Result.failure(.invalidGender)
+}
+
 func validatePerson(_ unvalidated: UnvalidatedPerson, id: PersonId) -> ValidatedResult<Person, [PersonValidationKey: PersonValidationError]> {
     
     let nameResult = validatePerson(name: unvalidated.name)
     let surnameResult = validatePerson(surname: unvalidated.surname)
     let ageResult = validatePerson(age: unvalidated.age)
+    let genderResult = validatePerson(gender: unvalidated.gender)
     
     do {
         
@@ -56,7 +63,8 @@ func validatePerson(_ unvalidated: UnvalidatedPerson, id: PersonId) -> Validated
             id: id,
             name: try nameResult.get(),
             surname: try surnameResult.get(),
-            age: try ageResult.get())
+            age: try ageResult.get(),
+            gender: try genderResult.get())
 
         return .valid(person)
         
@@ -66,6 +74,7 @@ func validatePerson(_ unvalidated: UnvalidatedPerson, id: PersonId) -> Validated
         errors[.name] = nameResult.error
         errors[.surname] = surnameResult.error
         errors[.age] = ageResult.error
+        errors[.gender] = genderResult.error
         
         return .invalid(errors)
     }

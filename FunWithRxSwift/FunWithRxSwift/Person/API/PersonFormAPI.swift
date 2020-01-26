@@ -10,8 +10,5 @@ protocol PersonFormAPI {
     func update(name: String?, for form: PersonForm) -> PersonForm
     func update(surname: String?, for form: PersonForm) -> PersonForm
     func update(age: UInt?, for form: PersonForm) -> PersonForm
-    func update(street: String?, for form: PersonForm) -> PersonForm
-    func update(city: String?, for form: PersonForm) -> PersonForm
-    func update(postCode: String?, for form: PersonForm) -> PersonForm
-    func update(email: String?, for form: PersonForm) -> PersonForm
+    func update(gender: Gender?, for form: PersonForm) -> PersonForm
 }

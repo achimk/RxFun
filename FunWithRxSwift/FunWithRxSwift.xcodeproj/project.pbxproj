@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12876C5EC898182EDBFB140C /* Pods_FunWithRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E8E9FD8434DCA15388CC49 /* Pods_FunWithRxSwift.framework */; };
+		271648DD23DD98AE003D89EC /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271648DC23DD98AE003D89EC /* Gender.swift */; };
 		27343183235341A300C8C416 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734317F235341A200C8C416 /* ErrorTracker.swift */; };
 		27343184235341A300C8C416 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27343180235341A200C8C416 /* ActivityIndicator.swift */; };
 		27343185235341A300C8C416 /* Observable+SystemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27343181235341A200C8C416 /* Observable+SystemExtensions.swift */; };
@@ -24,22 +25,13 @@
 		2796B7C5238BB46E00794ED6 /* ValidatedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7C4238BB46E00794ED6 /* ValidatedResult.swift */; };
 		2796B7C7238BB4DE00794ED6 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7C6238BB4DE00794ED6 /* Result+Extensions.swift */; };
 		2796B7CC238BB8DE00794ED6 /* PersonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7CB238BB8DE00794ED6 /* PersonListViewModel.swift */; };
-		2796B7CE238BB8E600794ED6 /* PersonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7CD238BB8E600794ED6 /* PersonDetailsViewModel.swift */; };
 		2796B7D0238BB94C00794ED6 /* PersonListObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7CF238BB94C00794ED6 /* PersonListObservable.swift */; };
-		2796B7D2238BB95900794ED6 /* PersonDetailsObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7D1238BB95900794ED6 /* PersonDetailsObservable.swift */; };
 		2796B7D4238BBE9900794ED6 /* ResultStateObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7D3238BBE9900794ED6 /* ResultStateObservable.swift */; };
-		2796B7D8238BC70000794ED6 /* EmptyPersonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7D7238BC70000794ED6 /* EmptyPersonDetailsViewModel.swift */; };
-		2796B7E2238BC8E500794ED6 /* DisplayPersonDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7E1238BC8E500794ED6 /* DisplayPersonDetailsViewModel.swift */; };
-		2796B7E4238BC91200794ED6 /* DisplayPersonDetailsIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7E3238BC91200794ED6 /* DisplayPersonDetailsIO.swift */; };
 		2796B7E8238BCA5500794ED6 /* PersonListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7E7238BCA5500794ED6 /* PersonListWireframe.swift */; };
-		2796B7EC238BCC8200794ED6 /* DisplayPersonDetailsViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7EB238BCC8200794ED6 /* DisplayPersonDetailsViewData.swift */; };
-		2796B7EE238BCCB200794ED6 /* DisplayAddressDetailsViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7ED238BCCB200794ED6 /* DisplayAddressDetailsViewData.swift */; };
 		279FD038238BE19200289AD0 /* PersonListViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FD037238BE19200289AD0 /* PersonListViewModelFactory.swift */; };
 		279FD062238BE44100289AD0 /* PersonForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FD061238BE44100289AD0 /* PersonForm.swift */; };
 		279FD064238BE45900289AD0 /* PersonChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FD063238BE45900289AD0 /* PersonChange.swift */; };
-		279FD066238BE72900289AD0 /* PostalAddressChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FD065238BE72900289AD0 /* PostalAddressChange.swift */; };
-		279FD068238BE8DD00289AD0 /* EmailAddressChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FD067238BE8DD00289AD0 /* EmailAddressChange.swift */; };
-		279FD06A238BEA1F00289AD0 /* PersonDetailsErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FD069238BEA1F00289AD0 /* PersonDetailsErrors.swift */; };
+		279FD06A238BEA1F00289AD0 /* PersonErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FD069238BEA1F00289AD0 /* PersonErrors.swift */; };
 		279FD06C238BECD000289AD0 /* PersonFormBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FD06B238BECD000289AD0 /* PersonFormBuilder.swift */; };
 		279FD06E238BF18900289AD0 /* PersonFormAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FD06D238BF18900289AD0 /* PersonFormAPI.swift */; };
 		27A14AA222E72B7F00491CAB /* DispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A14AA122E72B7F00491CAB /* DispatchTests.swift */; };
@@ -62,10 +54,6 @@
 		27CE5C3D238AAF0800784B5B /* AddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE5C3C238AAF0800784B5B /* AddressValidator.swift */; };
 		27D436DD22F981200085F1C6 /* FeedbackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D436DC22F981200085F1C6 /* FeedbackTests.swift */; };
 		27DA197622F98B2300DC69FC /* SchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA197522F98B2300DC69FC /* SchedulerTests.swift */; };
-		27E04E5C238BD8C000BB1459 /* PersonDetailsIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E04E5B238BD8C000BB1459 /* PersonDetailsIO.swift */; };
-		27E04E5E238BD8EF00BB1459 /* PersonDetailsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E04E5D238BD8EF00BB1459 /* PersonDetailsViewModelFactory.swift */; };
-		27E04E60238BDBF000BB1459 /* PersonDetailsLocalizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E04E5F238BDBF000BB1459 /* PersonDetailsLocalizing.swift */; };
-		27E04E63238BDC3500BB1459 /* StubPersonDetailsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E04E62238BDC3500BB1459 /* StubPersonDetailsLocalizer.swift */; };
 		27E04E65238BDD4600BB1459 /* PersonListIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E04E64238BDD4600BB1459 /* PersonListIO.swift */; };
 		27E04E67238BDD8B00BB1459 /* PersonListViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E04E66238BDD8B00BB1459 /* PersonListViewData.swift */; };
 		27E04E69238BDE8000BB1459 /* PersonListLocalizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E04E68238BDE8000BB1459 /* PersonListLocalizing.swift */; };
@@ -101,6 +89,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		271648DC23DD98AE003D89EC /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		2734317F235341A200C8C416 /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		27343180235341A200C8C416 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		27343181235341A200C8C416 /* Observable+SystemExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+SystemExtensions.swift"; sourceTree = "<group>"; };
@@ -117,22 +106,13 @@
 		2796B7C4238BB46E00794ED6 /* ValidatedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatedResult.swift; sourceTree = "<group>"; };
 		2796B7C6238BB4DE00794ED6 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 		2796B7CB238BB8DE00794ED6 /* PersonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModel.swift; sourceTree = "<group>"; };
-		2796B7CD238BB8E600794ED6 /* PersonDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewModel.swift; sourceTree = "<group>"; };
 		2796B7CF238BB94C00794ED6 /* PersonListObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListObservable.swift; sourceTree = "<group>"; };
-		2796B7D1238BB95900794ED6 /* PersonDetailsObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsObservable.swift; sourceTree = "<group>"; };
 		2796B7D3238BBE9900794ED6 /* ResultStateObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultStateObservable.swift; sourceTree = "<group>"; };
-		2796B7D7238BC70000794ED6 /* EmptyPersonDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPersonDetailsViewModel.swift; sourceTree = "<group>"; };
-		2796B7E1238BC8E500794ED6 /* DisplayPersonDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPersonDetailsViewModel.swift; sourceTree = "<group>"; };
-		2796B7E3238BC91200794ED6 /* DisplayPersonDetailsIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPersonDetailsIO.swift; sourceTree = "<group>"; };
 		2796B7E7238BCA5500794ED6 /* PersonListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListWireframe.swift; sourceTree = "<group>"; };
-		2796B7EB238BCC8200794ED6 /* DisplayPersonDetailsViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPersonDetailsViewData.swift; sourceTree = "<group>"; };
-		2796B7ED238BCCB200794ED6 /* DisplayAddressDetailsViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAddressDetailsViewData.swift; sourceTree = "<group>"; };
 		279FD037238BE19200289AD0 /* PersonListViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModelFactory.swift; sourceTree = "<group>"; };
 		279FD061238BE44100289AD0 /* PersonForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonForm.swift; sourceTree = "<group>"; };
 		279FD063238BE45900289AD0 /* PersonChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonChange.swift; sourceTree = "<group>"; };
-		279FD065238BE72900289AD0 /* PostalAddressChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostalAddressChange.swift; sourceTree = "<group>"; };
-		279FD067238BE8DD00289AD0 /* EmailAddressChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddressChange.swift; sourceTree = "<group>"; };
-		279FD069238BEA1F00289AD0 /* PersonDetailsErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsErrors.swift; sourceTree = "<group>"; };
+		279FD069238BEA1F00289AD0 /* PersonErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonErrors.swift; sourceTree = "<group>"; };
 		279FD06B238BECD000289AD0 /* PersonFormBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFormBuilder.swift; sourceTree = "<group>"; };
 		279FD06D238BF18900289AD0 /* PersonFormAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFormAPI.swift; sourceTree = "<group>"; };
 		27A14AA122E72B7F00491CAB /* DispatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchTests.swift; sourceTree = "<group>"; };
@@ -155,10 +135,6 @@
 		27CE5C3C238AAF0800784B5B /* AddressValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressValidator.swift; sourceTree = "<group>"; };
 		27D436DC22F981200085F1C6 /* FeedbackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTests.swift; sourceTree = "<group>"; };
 		27DA197522F98B2300DC69FC /* SchedulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerTests.swift; sourceTree = "<group>"; };
-		27E04E5B238BD8C000BB1459 /* PersonDetailsIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsIO.swift; sourceTree = "<group>"; };
-		27E04E5D238BD8EF00BB1459 /* PersonDetailsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewModelFactory.swift; sourceTree = "<group>"; };
-		27E04E5F238BDBF000BB1459 /* PersonDetailsLocalizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsLocalizing.swift; sourceTree = "<group>"; };
-		27E04E62238BDC3500BB1459 /* StubPersonDetailsLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubPersonDetailsLocalizer.swift; sourceTree = "<group>"; };
 		27E04E64238BDD4600BB1459 /* PersonListIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListIO.swift; sourceTree = "<group>"; };
 		27E04E66238BDD8B00BB1459 /* PersonListViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewData.swift; sourceTree = "<group>"; };
 		27E04E68238BDE8000BB1459 /* PersonListLocalizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListLocalizing.swift; sourceTree = "<group>"; };
@@ -214,6 +190,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		271648DB23DD9850003D89EC /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				27CE5C2B238A8FF700784B5B /* PersonDetails.swift */,
+				27CE5C2F238A90C600784B5B /* AddressInfo.swift */,
+				27CE5C38238AAC7200784B5B /* UnvalidatedAddress.swift */,
+				27CE5C2D238A901700784B5B /* PostalAddress.swift */,
+				27CE5C31238A9E4300784B5B /* EmailAddress.swift */,
+				27CE5C3C238AAF0800784B5B /* AddressValidator.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		276A7C2F23905B8D00B0A2C8 /* Functional */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,7 +231,6 @@
 			children = (
 				27E04E61238BDC2600BB1459 /* TestDoubles */,
 				2796B7C9238BB8B500794ED6 /* List */,
-				2796B7CA238BB8C200794ED6 /* Details */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -261,48 +249,13 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		2796B7CA238BB8C200794ED6 /* Details */ = {
-			isa = PBXGroup;
-			children = (
-				2796B7E9238BCC1E00794ED6 /* Display */,
-				27E04E5B238BD8C000BB1459 /* PersonDetailsIO.swift */,
-				27E04E5F238BDBF000BB1459 /* PersonDetailsLocalizing.swift */,
-				2796B7D1238BB95900794ED6 /* PersonDetailsObservable.swift */,
-				2796B7CD238BB8E600794ED6 /* PersonDetailsViewModel.swift */,
-				27E04E5D238BD8EF00BB1459 /* PersonDetailsViewModelFactory.swift */,
-			);
-			path = Details;
-			sourceTree = "<group>";
-		};
-		2796B7E9238BCC1E00794ED6 /* Display */ = {
-			isa = PBXGroup;
-			children = (
-				2796B7EA238BCC6A00794ED6 /* ViewData */,
-				2796B7E3238BC91200794ED6 /* DisplayPersonDetailsIO.swift */,
-				2796B7D7238BC70000794ED6 /* EmptyPersonDetailsViewModel.swift */,
-				2796B7E1238BC8E500794ED6 /* DisplayPersonDetailsViewModel.swift */,
-			);
-			path = Display;
-			sourceTree = "<group>";
-		};
-		2796B7EA238BCC6A00794ED6 /* ViewData */ = {
-			isa = PBXGroup;
-			children = (
-				2796B7EB238BCC8200794ED6 /* DisplayPersonDetailsViewData.swift */,
-				2796B7ED238BCCB200794ED6 /* DisplayAddressDetailsViewData.swift */,
-			);
-			path = ViewData;
-			sourceTree = "<group>";
-		};
 		279FD060238BE41E00289AD0 /* Form */ = {
 			isa = PBXGroup;
 			children = (
 				279FD061238BE44100289AD0 /* PersonForm.swift */,
 				279FD06B238BECD000289AD0 /* PersonFormBuilder.swift */,
 				279FD063238BE45900289AD0 /* PersonChange.swift */,
-				279FD065238BE72900289AD0 /* PostalAddressChange.swift */,
-				279FD067238BE8DD00289AD0 /* EmailAddressChange.swift */,
-				279FD069238BEA1F00289AD0 /* PersonDetailsErrors.swift */,
+				279FD069238BEA1F00289AD0 /* PersonErrors.swift */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -330,16 +283,12 @@
 		27CE5C33238AABE000784B5B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				271648DB23DD9850003D89EC /* Details */,
 				27CE5C34238AABEE00784B5B /* PersonId.swift */,
 				27CE5C29238A8F6300784B5B /* Person.swift */,
+				271648DC23DD98AE003D89EC /* Gender.swift */,
 				27CE5C36238AAC4F00784B5B /* UnvalidatedPerson.swift */,
-				27CE5C2B238A8FF700784B5B /* PersonDetails.swift */,
-				27CE5C2F238A90C600784B5B /* AddressInfo.swift */,
-				27CE5C38238AAC7200784B5B /* UnvalidatedAddress.swift */,
-				27CE5C2D238A901700784B5B /* PostalAddress.swift */,
-				27CE5C31238A9E4300784B5B /* EmailAddress.swift */,
 				27CE5C3A238AAC9F00784B5B /* PersonValidator.swift */,
-				27CE5C3C238AAF0800784B5B /* AddressValidator.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -358,7 +307,6 @@
 		27E04E61238BDC2600BB1459 /* TestDoubles */ = {
 			isa = PBXGroup;
 			children = (
-				27E04E62238BDC3500BB1459 /* StubPersonDetailsLocalizer.swift */,
 				27E04E6A238BDEAD00BB1459 /* StubPersonListLocalizer.swift */,
 			);
 			path = TestDoubles;
@@ -689,49 +637,37 @@
 				276A7C392390652E00B0A2C8 /* with.swift in Sources */,
 				27E04E67238BDD8B00BB1459 /* PersonListViewData.swift in Sources */,
 				27CE5C24238A8ED900784B5B /* ViewState.swift in Sources */,
-				27E04E5C238BD8C000BB1459 /* PersonDetailsIO.swift in Sources */,
+				271648DD23DD98AE003D89EC /* Gender.swift in Sources */,
 				27E04E69238BDE8000BB1459 /* PersonListLocalizing.swift in Sources */,
-				279FD06A238BEA1F00289AD0 /* PersonDetailsErrors.swift in Sources */,
+				279FD06A238BEA1F00289AD0 /* PersonErrors.swift in Sources */,
 				279FD064238BE45900289AD0 /* PersonChange.swift in Sources */,
 				2796B7C7238BB4DE00794ED6 /* Result+Extensions.swift in Sources */,
 				27E04E6D238BE04000BB1459 /* PersonListViewDataFactory.swift in Sources */,
 				27E73FED22E162F7005BAAB1 /* ViewController.swift in Sources */,
 				2796B7C5238BB46E00794ED6 /* ValidatedResult.swift in Sources */,
 				27E1254423D8B540007CCFF1 /* ResultState.swift in Sources */,
-				27E04E60238BDBF000BB1459 /* PersonDetailsLocalizing.swift in Sources */,
 				2796B7E8238BCA5500794ED6 /* PersonListWireframe.swift in Sources */,
 				276A7C3323905BBD00B0A2C8 /* constant.swift in Sources */,
 				27CE5C3D238AAF0800784B5B /* AddressValidator.swift in Sources */,
 				27E04E6B238BDEAD00BB1459 /* StubPersonListLocalizer.swift in Sources */,
 				27CE5C28238A8F4A00784B5B /* PersonAPI.swift in Sources */,
-				2796B7D8238BC70000794ED6 /* EmptyPersonDetailsViewModel.swift in Sources */,
-				2796B7D2238BB95900794ED6 /* PersonDetailsObservable.swift in Sources */,
-				2796B7EC238BCC8200794ED6 /* DisplayPersonDetailsViewData.swift in Sources */,
-				27E04E5E238BD8EF00BB1459 /* PersonDetailsViewModelFactory.swift in Sources */,
-				2796B7E2238BC8E500794ED6 /* DisplayPersonDetailsViewModel.swift in Sources */,
 				27343186235341A300C8C416 /* Feedbacks.swift in Sources */,
 				279FD038238BE19200289AD0 /* PersonListViewModelFactory.swift in Sources */,
-				279FD066238BE72900289AD0 /* PostalAddressChange.swift in Sources */,
-				2796B7EE238BCCB200794ED6 /* DisplayAddressDetailsViewData.swift in Sources */,
 				27343183235341A300C8C416 /* ErrorTracker.swift in Sources */,
 				276A7C3123905B9E00B0A2C8 /* ignore.swift in Sources */,
 				27CE5C2A238A8F6300784B5B /* Person.swift in Sources */,
 				276A7C3723905D5C00B0A2C8 /* identity.swift in Sources */,
 				279FD062238BE44100289AD0 /* PersonForm.swift in Sources */,
-				27E04E63238BDC3500BB1459 /* StubPersonDetailsLocalizer.swift in Sources */,
 				279FD06C238BECD000289AD0 /* PersonFormBuilder.swift in Sources */,
 				27343185235341A300C8C416 /* Observable+SystemExtensions.swift in Sources */,
 				279FD06E238BF18900289AD0 /* PersonFormAPI.swift in Sources */,
-				2796B7CE238BB8E600794ED6 /* PersonDetailsViewModel.swift in Sources */,
 				27CE5C39238AAC7200784B5B /* UnvalidatedAddress.swift in Sources */,
 				27E73FEB22E162F7005BAAB1 /* AppDelegate.swift in Sources */,
 				27CE5C2E238A901700784B5B /* PostalAddress.swift in Sources */,
 				27CE5C30238A90C600784B5B /* AddressInfo.swift in Sources */,
 				2796B7D4238BBE9900794ED6 /* ResultStateObservable.swift in Sources */,
-				2796B7E4238BC91200794ED6 /* DisplayPersonDetailsIO.swift in Sources */,
 				27CE5C2C238A8FF700784B5B /* PersonDetails.swift in Sources */,
 				27CE5C3B238AAC9F00784B5B /* PersonValidator.swift in Sources */,
-				279FD068238BE8DD00289AD0 /* EmailAddressChange.swift in Sources */,
 				2796B7D0238BB94C00794ED6 /* PersonListObservable.swift in Sources */,
 				27CE5C32238A9E4300784B5B /* EmailAddress.swift in Sources */,
 			);
