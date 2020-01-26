@@ -26,13 +26,11 @@ struct PersonListViewModel {
         
         output.items = state
             .asObservable()
-            .compactMap { state -> PersonListViewData? in
+            .map { state -> PersonListViewData in
                 if case .success(let data) = state {
-                    return PersonListViewDataFactory(
-                        persons: data,
-                        wireframe: wireframe).create()
+                    return PersonListViewDataFactory(persons: data, wireframe: wireframe).create()
                 } else {
-                    return nil
+                    return PersonListViewDataFactory(persons: [], wireframe: wireframe).create()
                 }
             }
             .asDriver(onErrorDriveWith: .empty())
