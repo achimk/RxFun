@@ -61,6 +61,20 @@
 		27E04E6D238BE04000BB1459 /* PersonListViewDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E04E6C238BE04000BB1459 /* PersonListViewDataFactory.swift */; };
 		27E1254423D8B540007CCFF1 /* ResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E1254323D8B540007CCFF1 /* ResultState.swift */; };
 		27E1256F23D9ADDD007CCFF1 /* ViewDataStateObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E1256E23D9ADDD007CCFF1 /* ViewDataStateObservableTests.swift */; };
+		27E31F5F23E1CCC8006F7F7A /* IdVerificationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F5E23E1CCC8006F7F7A /* IdVerificationAPI.swift */; };
+		27E31F6123E1CCD4006F7F7A /* VerificationRequirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F6023E1CCD4006F7F7A /* VerificationRequirements.swift */; };
+		27E31F6523E1CEF7006F7F7A /* IdVerificationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F6423E1CEF7006F7F7A /* IdVerificationForm.swift */; };
+		27E31F6723E1D012006F7F7A /* UnverifiedIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F6623E1D012006F7F7A /* UnverifiedIdentity.swift */; };
+		27E31F6923E1D03A006F7F7A /* VerificationReadyIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F6823E1D03A006F7F7A /* VerificationReadyIdentity.swift */; };
+		27E31F6B23E1D0FE006F7F7A /* VerifiedIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F6A23E1D0FE006F7F7A /* VerifiedIdentity.swift */; };
+		27E31F6D23E1D323006F7F7A /* IdVerificationApplicationSerivce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F6C23E1D323006F7F7A /* IdVerificationApplicationSerivce.swift */; };
+		27E31F6F23E1D7CA006F7F7A /* IdVerificationChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F6E23E1D7CA006F7F7A /* IdVerificationChange.swift */; };
+		27E31F7123E1D7D7006F7F7A /* IdVerificationValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F7023E1D7D7006F7F7A /* IdVerificationValidation.swift */; };
+		27E31F7323E1DED4006F7F7A /* VerificationIdentityValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F7223E1DED4006F7F7A /* VerificationIdentityValidator.swift */; };
+		27E31F7523E1E829006F7F7A /* IdVerificationFormBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F7423E1E829006F7F7A /* IdVerificationFormBuilder.swift */; };
+		27E31F7923E1EB5C006F7F7A /* IdVerificationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F7823E1EB5C006F7F7A /* IdVerificationUseCase.swift */; };
+		27E31F7B23E1EC02006F7F7A /* IdVerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F7A23E1EC02006F7F7A /* IdVerificationService.swift */; };
+		27E31F7F23E1ED7F006F7F7A /* StubIdVerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F7E23E1ED7F006F7F7A /* StubIdVerificationService.swift */; };
 		27E73FEB22E162F7005BAAB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E73FEA22E162F7005BAAB1 /* AppDelegate.swift */; };
 		27E73FED22E162F7005BAAB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E73FEC22E162F7005BAAB1 /* ViewController.swift */; };
 		27E73FF022E162F7005BAAB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E73FEE22E162F7005BAAB1 /* Main.storyboard */; };
@@ -142,6 +156,20 @@
 		27E04E6C238BE04000BB1459 /* PersonListViewDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewDataFactory.swift; sourceTree = "<group>"; };
 		27E1254323D8B540007CCFF1 /* ResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultState.swift; sourceTree = "<group>"; };
 		27E1256E23D9ADDD007CCFF1 /* ViewDataStateObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataStateObservableTests.swift; sourceTree = "<group>"; };
+		27E31F5E23E1CCC8006F7F7A /* IdVerificationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdVerificationAPI.swift; sourceTree = "<group>"; };
+		27E31F6023E1CCD4006F7F7A /* VerificationRequirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationRequirements.swift; sourceTree = "<group>"; };
+		27E31F6423E1CEF7006F7F7A /* IdVerificationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdVerificationForm.swift; sourceTree = "<group>"; };
+		27E31F6623E1D012006F7F7A /* UnverifiedIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnverifiedIdentity.swift; sourceTree = "<group>"; };
+		27E31F6823E1D03A006F7F7A /* VerificationReadyIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationReadyIdentity.swift; sourceTree = "<group>"; };
+		27E31F6A23E1D0FE006F7F7A /* VerifiedIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedIdentity.swift; sourceTree = "<group>"; };
+		27E31F6C23E1D323006F7F7A /* IdVerificationApplicationSerivce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdVerificationApplicationSerivce.swift; sourceTree = "<group>"; };
+		27E31F6E23E1D7CA006F7F7A /* IdVerificationChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdVerificationChange.swift; sourceTree = "<group>"; };
+		27E31F7023E1D7D7006F7F7A /* IdVerificationValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdVerificationValidation.swift; sourceTree = "<group>"; };
+		27E31F7223E1DED4006F7F7A /* VerificationIdentityValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationIdentityValidator.swift; sourceTree = "<group>"; };
+		27E31F7423E1E829006F7F7A /* IdVerificationFormBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdVerificationFormBuilder.swift; sourceTree = "<group>"; };
+		27E31F7823E1EB5C006F7F7A /* IdVerificationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdVerificationUseCase.swift; sourceTree = "<group>"; };
+		27E31F7A23E1EC02006F7F7A /* IdVerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdVerificationService.swift; sourceTree = "<group>"; };
+		27E31F7E23E1ED7F006F7F7A /* StubIdVerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubIdVerificationService.swift; sourceTree = "<group>"; };
 		27E73FE722E162F7005BAAB1 /* FunWithRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunWithRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E73FEA22E162F7005BAAB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27E73FEC22E162F7005BAAB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -329,6 +357,91 @@
 			path = ViewData;
 			sourceTree = "<group>";
 		};
+		27E31F5B23E1CC94006F7F7A /* CarVerification */ = {
+			isa = PBXGroup;
+			children = (
+				27E31F5C23E1CCA7006F7F7A /* IdVerification */,
+			);
+			path = CarVerification;
+			sourceTree = "<group>";
+		};
+		27E31F5C23E1CCA7006F7F7A /* IdVerification */ = {
+			isa = PBXGroup;
+			children = (
+				27E31F5D23E1CCBA006F7F7A /* API */,
+				27E31F7C23E1ED4A006F7F7A /* Infrastucture */,
+			);
+			path = IdVerification;
+			sourceTree = "<group>";
+		};
+		27E31F5D23E1CCBA006F7F7A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				27E31F7D23E1ED6D006F7F7A /* TestDoubles */,
+				27E31F7623E1EB43006F7F7A /* UseCases */,
+				27E31F6323E1CEE1006F7F7A /* Form */,
+				27E31F6223E1CEC3006F7F7A /* Domain */,
+				27E31F5E23E1CCC8006F7F7A /* IdVerificationAPI.swift */,
+				27E31F6C23E1D323006F7F7A /* IdVerificationApplicationSerivce.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		27E31F6223E1CEC3006F7F7A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				27E31F6023E1CCD4006F7F7A /* VerificationRequirements.swift */,
+				27E31F6623E1D012006F7F7A /* UnverifiedIdentity.swift */,
+				27E31F6823E1D03A006F7F7A /* VerificationReadyIdentity.swift */,
+				27E31F6A23E1D0FE006F7F7A /* VerifiedIdentity.swift */,
+				27E31F7223E1DED4006F7F7A /* VerificationIdentityValidator.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		27E31F6323E1CEE1006F7F7A /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				27E31F7423E1E829006F7F7A /* IdVerificationFormBuilder.swift */,
+				27E31F6423E1CEF7006F7F7A /* IdVerificationForm.swift */,
+				27E31F6E23E1D7CA006F7F7A /* IdVerificationChange.swift */,
+				27E31F7023E1D7D7006F7F7A /* IdVerificationValidation.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		27E31F7623E1EB43006F7F7A /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				27E31F7723E1EB4C006F7F7A /* IdVerification */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		27E31F7723E1EB4C006F7F7A /* IdVerification */ = {
+			isa = PBXGroup;
+			children = (
+				27E31F7823E1EB5C006F7F7A /* IdVerificationUseCase.swift */,
+				27E31F7A23E1EC02006F7F7A /* IdVerificationService.swift */,
+			);
+			path = IdVerification;
+			sourceTree = "<group>";
+		};
+		27E31F7C23E1ED4A006F7F7A /* Infrastucture */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Infrastucture;
+			sourceTree = "<group>";
+		};
+		27E31F7D23E1ED6D006F7F7A /* TestDoubles */ = {
+			isa = PBXGroup;
+			children = (
+				27E31F7E23E1ED7F006F7F7A /* StubIdVerificationService.swift */,
+			);
+			path = TestDoubles;
+			sourceTree = "<group>";
+		};
 		27E73FDE22E162F7005BAAB1 = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +470,7 @@
 				276A7C2F23905B8D00B0A2C8 /* Functional */,
 				2796B79D238BB41200794ED6 /* Commons */,
 				27CE5C25238A8F3D00784B5B /* Person */,
+				27E31F5B23E1CC94006F7F7A /* CarVerification */,
 				27D436DE22F9815C0085F1C6 /* External */,
 				27E73FEA22E162F7005BAAB1 /* AppDelegate.swift */,
 				27E73FEC22E162F7005BAAB1 /* ViewController.swift */,
@@ -640,10 +754,14 @@
 				27343184235341A300C8C416 /* ActivityIndicator.swift in Sources */,
 				27CE5C35238AABEE00784B5B /* PersonId.swift in Sources */,
 				2796B7CC238BB8DE00794ED6 /* PersonListViewModel.swift in Sources */,
+				27E31F6723E1D012006F7F7A /* UnverifiedIdentity.swift in Sources */,
+				27E31F6F23E1D7CA006F7F7A /* IdVerificationChange.swift in Sources */,
 				27CE5C37238AAC4F00784B5B /* UnvalidatedPerson.swift in Sources */,
 				27E04E65238BDD4600BB1459 /* PersonListIO.swift in Sources */,
 				276A7C392390652E00B0A2C8 /* with.swift in Sources */,
 				27E04E67238BDD8B00BB1459 /* PersonListViewData.swift in Sources */,
+				27E31F7923E1EB5C006F7F7A /* IdVerificationUseCase.swift in Sources */,
+				27E31F7523E1E829006F7F7A /* IdVerificationFormBuilder.swift in Sources */,
 				27CE5C24238A8ED900784B5B /* RawResultState.swift in Sources */,
 				271648DD23DD98AE003D89EC /* Gender.swift in Sources */,
 				27E04E69238BDE8000BB1459 /* PersonListLocalizing.swift in Sources */,
@@ -651,11 +769,17 @@
 				279FD064238BE45900289AD0 /* PersonChange.swift in Sources */,
 				2796B7C7238BB4DE00794ED6 /* Result+Extensions.swift in Sources */,
 				27E04E6D238BE04000BB1459 /* PersonListViewDataFactory.swift in Sources */,
+				27E31F7323E1DED4006F7F7A /* VerificationIdentityValidator.swift in Sources */,
 				27E73FED22E162F7005BAAB1 /* ViewController.swift in Sources */,
+				27E31F6523E1CEF7006F7F7A /* IdVerificationForm.swift in Sources */,
 				2796B7C5238BB46E00794ED6 /* ValidatedResult.swift in Sources */,
 				27E1254423D8B540007CCFF1 /* ResultState.swift in Sources */,
 				2796B7E8238BCA5500794ED6 /* PersonListWireframe.swift in Sources */,
+				27E31F6B23E1D0FE006F7F7A /* VerifiedIdentity.swift in Sources */,
 				276A7C3323905BBD00B0A2C8 /* constant.swift in Sources */,
+				27E31F6123E1CCD4006F7F7A /* VerificationRequirements.swift in Sources */,
+				27E31F7F23E1ED7F006F7F7A /* StubIdVerificationService.swift in Sources */,
+				27E31F6D23E1D323006F7F7A /* IdVerificationApplicationSerivce.swift in Sources */,
 				27CE5C3D238AAF0800784B5B /* AddressValidator.swift in Sources */,
 				27E04E6B238BDEAD00BB1459 /* StubPersonListLocalizer.swift in Sources */,
 				27CE5C28238A8F4A00784B5B /* PersonAPI.swift in Sources */,
@@ -670,14 +794,18 @@
 				27343185235341A300C8C416 /* Observable+SystemExtensions.swift in Sources */,
 				279FD06E238BF18900289AD0 /* PersonFormAPI.swift in Sources */,
 				27CE5C39238AAC7200784B5B /* UnvalidatedAddress.swift in Sources */,
+				27E31F6923E1D03A006F7F7A /* VerificationReadyIdentity.swift in Sources */,
+				27E31F7123E1D7D7006F7F7A /* IdVerificationValidation.swift in Sources */,
 				27E73FEB22E162F7005BAAB1 /* AppDelegate.swift in Sources */,
 				27CE5C2E238A901700784B5B /* PostalAddress.swift in Sources */,
 				27CE5C30238A90C600784B5B /* AddressInfo.swift in Sources */,
 				2796B7D4238BBE9900794ED6 /* ResultStateObservable.swift in Sources */,
 				27CE5C2C238A8FF700784B5B /* PersonDetails.swift in Sources */,
+				27E31F5F23E1CCC8006F7F7A /* IdVerificationAPI.swift in Sources */,
 				27CE5C3B238AAC9F00784B5B /* PersonValidator.swift in Sources */,
 				2796B7D0238BB94C00794ED6 /* PersonListObservable.swift in Sources */,
 				27CE5C32238A9E4300784B5B /* EmailAddress.swift in Sources */,
+				27E31F7B23E1EC02006F7F7A /* IdVerificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
