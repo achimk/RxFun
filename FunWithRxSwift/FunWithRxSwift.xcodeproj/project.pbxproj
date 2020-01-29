@@ -75,6 +75,11 @@
 		27E31F7923E1EB5C006F7F7A /* IdVerificationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F7823E1EB5C006F7F7A /* IdVerificationUseCase.swift */; };
 		27E31F7B23E1EC02006F7F7A /* IdVerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F7A23E1EC02006F7F7A /* IdVerificationService.swift */; };
 		27E31F7F23E1ED7F006F7F7A /* StubIdVerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F7E23E1ED7F006F7F7A /* StubIdVerificationService.swift */; };
+		27E31F8323E1EFB1006F7F7A /* VerificationDocumentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F8223E1EFB1006F7F7A /* VerificationDocumentType.swift */; };
+		27E31F8823E1F07B006F7F7A /* VerificationDocumentSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F8723E1F07B006F7F7A /* VerificationDocumentSelectionViewModel.swift */; };
+		27E31F8A23E1F081006F7F7A /* VerificationDocumentSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F8923E1F081006F7F7A /* VerificationDocumentSelectionView.swift */; };
+		27E31F8C23E1F0B3006F7F7A /* VerificationDocumentSelectionViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F8B23E1F0B3006F7F7A /* VerificationDocumentSelectionViewData.swift */; };
+		27E31F8E23E1F281006F7F7A /* VerificationDocumentSelectionObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F8D23E1F281006F7F7A /* VerificationDocumentSelectionObservable.swift */; };
 		27E73FEB22E162F7005BAAB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E73FEA22E162F7005BAAB1 /* AppDelegate.swift */; };
 		27E73FED22E162F7005BAAB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E73FEC22E162F7005BAAB1 /* ViewController.swift */; };
 		27E73FF022E162F7005BAAB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E73FEE22E162F7005BAAB1 /* Main.storyboard */; };
@@ -170,6 +175,11 @@
 		27E31F7823E1EB5C006F7F7A /* IdVerificationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdVerificationUseCase.swift; sourceTree = "<group>"; };
 		27E31F7A23E1EC02006F7F7A /* IdVerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdVerificationService.swift; sourceTree = "<group>"; };
 		27E31F7E23E1ED7F006F7F7A /* StubIdVerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubIdVerificationService.swift; sourceTree = "<group>"; };
+		27E31F8223E1EFB1006F7F7A /* VerificationDocumentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationDocumentType.swift; sourceTree = "<group>"; };
+		27E31F8723E1F07B006F7F7A /* VerificationDocumentSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationDocumentSelectionViewModel.swift; sourceTree = "<group>"; };
+		27E31F8923E1F081006F7F7A /* VerificationDocumentSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationDocumentSelectionView.swift; sourceTree = "<group>"; };
+		27E31F8B23E1F0B3006F7F7A /* VerificationDocumentSelectionViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationDocumentSelectionViewData.swift; sourceTree = "<group>"; };
+		27E31F8D23E1F281006F7F7A /* VerificationDocumentSelectionObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationDocumentSelectionObservable.swift; sourceTree = "<group>"; };
 		27E73FE722E162F7005BAAB1 /* FunWithRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunWithRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E73FEA22E162F7005BAAB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27E73FEC22E162F7005BAAB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -368,6 +378,9 @@
 		27E31F5C23E1CCA7006F7F7A /* IdVerification */ = {
 			isa = PBXGroup;
 			children = (
+				27E31F8123E1EF33006F7F7A /* UI */,
+				27E31F8623E1F067006F7F7A /* Wireframe */,
+				27E31F8023E1EF28006F7F7A /* Presentation */,
 				27E31F5D23E1CCBA006F7F7A /* API */,
 				27E31F7C23E1ED4A006F7F7A /* Infrastucture */,
 			);
@@ -390,6 +403,7 @@
 		27E31F6223E1CEC3006F7F7A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				27E31F8223E1EFB1006F7F7A /* VerificationDocumentType.swift */,
 				27E31F6023E1CCD4006F7F7A /* VerificationRequirements.swift */,
 				27E31F6623E1D012006F7F7A /* UnverifiedIdentity.swift */,
 				27E31F6823E1D03A006F7F7A /* VerificationReadyIdentity.swift */,
@@ -440,6 +454,47 @@
 				27E31F7E23E1ED7F006F7F7A /* StubIdVerificationService.swift */,
 			);
 			path = TestDoubles;
+			sourceTree = "<group>";
+		};
+		27E31F8023E1EF28006F7F7A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				27E31F8423E1F025006F7F7A /* VerificationDocumentSelection */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		27E31F8123E1EF33006F7F7A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				27E31F8523E1F035006F7F7A /* VerificationDocumentSelection */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		27E31F8423E1F025006F7F7A /* VerificationDocumentSelection */ = {
+			isa = PBXGroup;
+			children = (
+				27E31F8D23E1F281006F7F7A /* VerificationDocumentSelectionObservable.swift */,
+				27E31F8B23E1F0B3006F7F7A /* VerificationDocumentSelectionViewData.swift */,
+				27E31F8723E1F07B006F7F7A /* VerificationDocumentSelectionViewModel.swift */,
+			);
+			path = VerificationDocumentSelection;
+			sourceTree = "<group>";
+		};
+		27E31F8523E1F035006F7F7A /* VerificationDocumentSelection */ = {
+			isa = PBXGroup;
+			children = (
+				27E31F8923E1F081006F7F7A /* VerificationDocumentSelectionView.swift */,
+			);
+			path = VerificationDocumentSelection;
+			sourceTree = "<group>";
+		};
+		27E31F8623E1F067006F7F7A /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wireframe;
 			sourceTree = "<group>";
 		};
 		27E73FDE22E162F7005BAAB1 = {
@@ -786,8 +841,11 @@
 				27343186235341A300C8C416 /* Feedbacks.swift in Sources */,
 				279FD038238BE19200289AD0 /* PersonListViewModelFactory.swift in Sources */,
 				27343183235341A300C8C416 /* ErrorTracker.swift in Sources */,
+				27E31F8A23E1F081006F7F7A /* VerificationDocumentSelectionView.swift in Sources */,
 				276A7C3123905B9E00B0A2C8 /* ignore.swift in Sources */,
+				27E31F8E23E1F281006F7F7A /* VerificationDocumentSelectionObservable.swift in Sources */,
 				27CE5C2A238A8F6300784B5B /* Person.swift in Sources */,
+				27E31F8323E1EFB1006F7F7A /* VerificationDocumentType.swift in Sources */,
 				276A7C3723905D5C00B0A2C8 /* identity.swift in Sources */,
 				279FD062238BE44100289AD0 /* PersonForm.swift in Sources */,
 				279FD06C238BECD000289AD0 /* PersonFormBuilder.swift in Sources */,
@@ -798,6 +856,7 @@
 				27E31F7123E1D7D7006F7F7A /* IdVerificationValidation.swift in Sources */,
 				27E73FEB22E162F7005BAAB1 /* AppDelegate.swift in Sources */,
 				27CE5C2E238A901700784B5B /* PostalAddress.swift in Sources */,
+				27E31F8C23E1F0B3006F7F7A /* VerificationDocumentSelectionViewData.swift in Sources */,
 				27CE5C30238A90C600784B5B /* AddressInfo.swift in Sources */,
 				2796B7D4238BBE9900794ED6 /* ResultStateObservable.swift in Sources */,
 				27CE5C2C238A8FF700784B5B /* PersonDetails.swift in Sources */,
@@ -805,6 +864,7 @@
 				27CE5C3B238AAC9F00784B5B /* PersonValidator.swift in Sources */,
 				2796B7D0238BB94C00794ED6 /* PersonListObservable.swift in Sources */,
 				27CE5C32238A9E4300784B5B /* EmailAddress.swift in Sources */,
+				27E31F8823E1F07B006F7F7A /* VerificationDocumentSelectionViewModel.swift in Sources */,
 				27E31F7B23E1EC02006F7F7A /* IdVerificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
