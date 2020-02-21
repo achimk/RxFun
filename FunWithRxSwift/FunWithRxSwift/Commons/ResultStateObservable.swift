@@ -11,7 +11,7 @@ final class ResultStateObservable<Request, Response>: ObservableConvertibleType 
 
     typealias State = ResultState<Response, Swift.Error>
     
-    private let dispatcher = PublishSubject<(Request, Bool)>()
+    private let dispatcher = PublishRelay<(Request, Bool)>()
     private let state = BehaviorRelay<State>(value: .initial)
     private var bag = DisposeBag()
     
@@ -21,7 +21,7 @@ final class ResultStateObservable<Request, Response>: ObservableConvertibleType 
     }
 
     func dispatch(_ request: Request, force: Bool = false) {
-        dispatcher.onNext((request, force))
+        dispatcher.accept((request, force))
     }
     
     func asObservable() -> Observable<State> {
