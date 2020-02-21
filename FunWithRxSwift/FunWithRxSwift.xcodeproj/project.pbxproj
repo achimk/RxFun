@@ -11,6 +11,10 @@
 		270DE51C2400042600E40E67 /* PersonListObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7CF238BB94C00794ED6 /* PersonListObservable.swift */; };
 		270DE52124001E8300E40E67 /* PersonListTransformBagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2796B7CB238BB8DE00794ED6 /* PersonListTransformBagViewModel.swift */; };
 		270DE522240020A500E40E67 /* PersonListTransformBagViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FD037238BE19200289AD0 /* PersonListTransformBagViewModelFactory.swift */; };
+		270DE524240021B500E40E67 /* PersonListTransformViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270DE523240021B500E40E67 /* PersonListTransformViewModel.swift */; };
+		270DE5262400224D00E40E67 /* PersonListBasicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270DE5252400224D00E40E67 /* PersonListBasicViewModel.swift */; };
+		270DE52B24002D9500E40E67 /* Binder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270DE52A24002D9500E40E67 /* Binder+Extensions.swift */; };
+		270DE52D24002DCA00E40E67 /* BinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270DE52C24002DCA00E40E67 /* BinderTests.swift */; };
 		2712DADB23FA8F660014017A /* TestMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712DADA23FA8F660014017A /* TestMe.swift */; };
 		271648DD23DD98AE003D89EC /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271648DC23DD98AE003D89EC /* Gender.swift */; };
 		27343183235341A300C8C416 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734317F235341A200C8C416 /* ErrorTracker.swift */; };
@@ -82,7 +86,6 @@
 		27E31F8E23E1F281006F7F7A /* VerificationDocumentSelectionObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E31F8D23E1F281006F7F7A /* VerificationDocumentSelectionObservable.swift */; };
 		27E6E59C23FEB67E000DB8CA /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E6E59B23FEB67E000DB8CA /* CoordinatorTests.swift */; };
 		27E73FEB22E162F7005BAAB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E73FEA22E162F7005BAAB1 /* AppDelegate.swift */; };
-		27E73FED22E162F7005BAAB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E73FEC22E162F7005BAAB1 /* ViewController.swift */; };
 		27E73FF022E162F7005BAAB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E73FEE22E162F7005BAAB1 /* Main.storyboard */; };
 		27E73FF222E162F9005BAAB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E73FF122E162F9005BAAB1 /* Assets.xcassets */; };
 		27E73FF522E162F9005BAAB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E73FF322E162F9005BAAB1 /* LaunchScreen.storyboard */; };
@@ -109,6 +112,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		270DE523240021B500E40E67 /* PersonListTransformViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListTransformViewModel.swift; sourceTree = "<group>"; };
+		270DE5252400224D00E40E67 /* PersonListBasicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListBasicViewModel.swift; sourceTree = "<group>"; };
+		270DE52A24002D9500E40E67 /* Binder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binder+Extensions.swift"; sourceTree = "<group>"; };
+		270DE52C24002DCA00E40E67 /* BinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinderTests.swift; sourceTree = "<group>"; };
 		2712DADA23FA8F660014017A /* TestMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMe.swift; sourceTree = "<group>"; };
 		271648DC23DD98AE003D89EC /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		2734317F235341A200C8C416 /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
@@ -253,6 +260,7 @@
 		270DE51E2400100E00E40E67 /* Transform */ = {
 			isa = PBXGroup;
 			children = (
+				270DE523240021B500E40E67 /* PersonListTransformViewModel.swift */,
 			);
 			path = Transform;
 			sourceTree = "<group>";
@@ -269,6 +277,7 @@
 		270DE5202400101D00E40E67 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				270DE5252400224D00E40E67 /* PersonListBasicViewModel.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -387,6 +396,7 @@
 				2734317F235341A200C8C416 /* ErrorTracker.swift */,
 				27343182235341A200C8C416 /* Feedbacks.swift */,
 				27343181235341A200C8C416 /* Observable+SystemExtensions.swift */,
+				270DE52A24002D9500E40E67 /* Binder+Extensions.swift */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -599,6 +609,7 @@
 				27E7400122E162F9005BAAB1 /* Info.plist */,
 				2712DADA23FA8F660014017A /* TestMe.swift */,
 				27E6E59B23FEB67E000DB8CA /* CoordinatorTests.swift */,
+				270DE52C24002DCA00E40E67 /* BinderTests.swift */,
 			);
 			path = FunWithRxSwiftTests;
 			sourceTree = "<group>";
@@ -862,12 +873,12 @@
 				271648DD23DD98AE003D89EC /* Gender.swift in Sources */,
 				27E04E69238BDE8000BB1459 /* PersonListLocalizing.swift in Sources */,
 				279FD06A238BEA1F00289AD0 /* PersonErrors.swift in Sources */,
+				270DE52B24002D9500E40E67 /* Binder+Extensions.swift in Sources */,
 				270DE522240020A500E40E67 /* PersonListTransformBagViewModelFactory.swift in Sources */,
 				279FD064238BE45900289AD0 /* PersonChange.swift in Sources */,
 				2796B7C7238BB4DE00794ED6 /* Result+Extensions.swift in Sources */,
 				27E04E6D238BE04000BB1459 /* PersonListViewDataFactory.swift in Sources */,
 				27E31F7323E1DED4006F7F7A /* VerificationIdentityValidator.swift in Sources */,
-				27E73FED22E162F7005BAAB1 /* ViewController.swift in Sources */,
 				27E31F6523E1CEF7006F7F7A /* IdVerificationForm.swift in Sources */,
 				2796B7C5238BB46E00794ED6 /* ValidatedResult.swift in Sources */,
 				27E1254423D8B540007CCFF1 /* ResultState.swift in Sources */,
@@ -893,10 +904,12 @@
 				279FD06C238BECD000289AD0 /* PersonFormBuilder.swift in Sources */,
 				27343185235341A300C8C416 /* Observable+SystemExtensions.swift in Sources */,
 				279FD06E238BF18900289AD0 /* PersonFormAPI.swift in Sources */,
+				270DE524240021B500E40E67 /* PersonListTransformViewModel.swift in Sources */,
 				27CE5C39238AAC7200784B5B /* UnvalidatedAddress.swift in Sources */,
 				27E31F6923E1D03A006F7F7A /* VerificationReadyIdentity.swift in Sources */,
 				27E31F7123E1D7D7006F7F7A /* IdVerificationValidation.swift in Sources */,
 				27E73FEB22E162F7005BAAB1 /* AppDelegate.swift in Sources */,
+				270DE5262400224D00E40E67 /* PersonListBasicViewModel.swift in Sources */,
 				270DE51C2400042600E40E67 /* PersonListObservable.swift in Sources */,
 				27CE5C2E238A901700784B5B /* PostalAddress.swift in Sources */,
 				27E31F8C23E1F0B3006F7F7A /* VerificationDocumentSelectionViewData.swift in Sources */,
@@ -932,6 +945,7 @@
 				27E1256F23D9ADDD007CCFF1 /* ViewDataStateObservableTests.swift in Sources */,
 				27A7939A22FC721700FF44C7 /* SingleZipTests.swift in Sources */,
 				27E6E59C23FEB67E000DB8CA /* CoordinatorTests.swift in Sources */,
+				270DE52D24002DCA00E40E67 /* BinderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
