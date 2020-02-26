@@ -1,16 +1,10 @@
 //: [Previous](@previous)
 
-import Foundation
-
 /*:
  
- **Observable Convertible**
+ ### Observable Convertible Definition
    
 */
-
-/*:
- ##Definition
- */
 
 protocol ObservableConvertibleType {
     /// Type of elements in sequence.

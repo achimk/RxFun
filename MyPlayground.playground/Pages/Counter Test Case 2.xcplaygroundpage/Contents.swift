@@ -2,13 +2,16 @@
 
 /*:
  
- **Counter test case**
+ ### Counter test cases by RxScheduler
+ 
 */
 
 import XCTest
 import RxSwift
 import RxCocoa
 import RxTest
+
+// MARK: - Observable
 
 final class CounterObservable: ObservableConvertibleType {
     
@@ -29,6 +32,8 @@ final class CounterObservable: ObservableConvertibleType {
     }
 }
 
+// MARK: - ViewModel
+
 final class CounterViewModel {
     
     struct Input {
@@ -43,14 +48,15 @@ final class CounterViewModel {
     let input: Input
     let output: Output
     
-    init(observable: CounterObservable) {
+    init(state: CounterObservable) {
         
         // Input
-        let increment = Binder<Void>(observable, binding: { (state, _) in state.increment() })
-        let decrement = Binder<Void>(observable, binding: { (state, _) in state.decrement() })
+        let increment = Binder<Void>(state, binding: { (state, _) in state.increment() })
+        let decrement = Binder<Void>(state, binding: { (state, _) in state.decrement() })
         
         // Output
-        let current = observable.asObservable()
+        let current = state
+            .asObservable()
             .map { "Counter: \($0)" }
             .asDriver(onErrorDriveWith: .empty())
         
@@ -60,6 +66,8 @@ final class CounterViewModel {
     }
     
 }
+
+// MARK: - CounterObservable Tests
 
 final class CounterObservableTests: XCTestCase {
     
@@ -153,6 +161,8 @@ final class CounterObservableTests: XCTestCase {
     }
 }
 
+// MARK: - CounterViewModel Tests
+
 final class CounterViewModelTests: XCTestCase {
     
     func testBind() {
@@ -228,7 +238,8 @@ final class CounterViewModelTests: XCTestCase {
     private func prepareTestCompoments() -> TestComponents {
         
         let state = CounterObservable()
-        let viewModel = CounterViewModel(observable: state)
+        
+        let viewModel = CounterViewModel(state: state)
         
         let increment = { viewModel.input.increment.onNext(()) }
         let decrement = { viewModel.input.decrement.onNext(()) }
@@ -236,7 +247,5 @@ final class CounterViewModelTests: XCTestCase {
         return (viewModel, state, (increment, decrement))
     }
 }
-
-
 
 //: [Next](@next)

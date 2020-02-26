@@ -1,12 +1,16 @@
-//
-//  Created by Joachim Kret on 26/02/2020.
-//  Copyright © 2020 Joachim Kret. All rights reserved.
-//
+//: [Previous](@previous)
+
+/*:
+ 
+ ### Counter test cases by wait for action
+ 
+*/
 
 import XCTest
 import RxSwift
 import RxCocoa
-import RxTest
+
+// MARK: - Observable
 
 final class CounterObservable: ObservableConvertibleType {
     
@@ -26,6 +30,8 @@ final class CounterObservable: ObservableConvertibleType {
         return state.asObservable()
     }
 }
+
+// MARK: - ViewModel
 
 final class CounterViewModel {
     
@@ -60,184 +66,9 @@ final class CounterViewModel {
     
 }
 
-final class ScheduledCounterObservableTests: XCTestCase {
-    
-    private var bag = DisposeBag()
-    
-    override func tearDown() {
-        bag = DisposeBag()
-        super.tearDown()
-    }
-    
-    func testInitialState() {
-        
-        let state = CounterObservable()
-        let scheduler = TestScheduler(initialClock: 200)
-        let pipeline = scheduler.start { () -> Observable<Int> in
-            return state.asObservable()
-        }
-        
-        XCTAssertEqual(pipeline.events, [
-            .next(200, 0)
-        ])
-        
-        XCTAssertEqual(state.current, 0)
-    }
-    
-    func testIncrement() {
+// MARK: - CounterObservable Tests
 
-        let state = CounterObservable()
-        let scheduler = TestScheduler(initialClock: 200)
-        
-        scheduler.scheduleAt(400, action: state.increment)
-        scheduler.scheduleAt(600, action: state.increment)
-        scheduler.scheduleAt(800, action: state.increment)
-        
-        let pipeline = scheduler.start { () -> Observable<Int> in
-            return state.asObservable()
-        }
-
-        XCTAssertEqual(pipeline.events, [
-            .next(200, 0),
-            .next(400, 1),
-            .next(600, 2),
-            .next(800, 3),
-        ])
-        
-        XCTAssertEqual(state.current, 3)
-    }
-    
-    func testDecrement() {
-        
-        let state = CounterObservable()
-        let scheduler = TestScheduler(initialClock: 200)
-        
-        scheduler.scheduleAt(400, action: state.decrement)
-        scheduler.scheduleAt(600, action: state.decrement)
-        scheduler.scheduleAt(800, action: state.decrement)
-        
-        let pipeline = scheduler.start { () -> Observable<Int> in
-            return state.asObservable()
-        }
-
-        XCTAssertEqual(pipeline.events, [
-            .next(200, 0),
-            .next(400, -1),
-            .next(600, -2),
-            .next(800, -3),
-        ])
-        
-        XCTAssertEqual(state.current, -3)
-    }
-    
-    func testIncrementAndDecrement() {
-        
-        let state = CounterObservable()
-        let scheduler = TestScheduler(initialClock: 200)
-        
-        scheduler.scheduleAt(400, action: state.increment)
-        scheduler.scheduleAt(600, action: state.decrement)
-        
-        let pipeline = scheduler.start { () -> Observable<Int> in
-            return state.asObservable()
-        }
-
-        XCTAssertEqual(pipeline.events, [
-            .next(200, 0),
-            .next(400, 1),
-            .next(600, 0),
-        ])
-        
-        XCTAssertEqual(state.current, 0)
-    }
-}
-
-final class ScheduledCounterViewModelTests: XCTestCase {
-    
-    func testBind() {
-        
-        let components = prepareTestCompoments()
-        let scheduler = TestScheduler(initialClock: 200)
-        
-        let pipeline = scheduler.start { () -> Observable<String> in
-            return components.viewModel.output.current.asObservable()
-        }
-        
-        XCTAssertEqual(pipeline.events, [
-            .next(200, "Counter: 0")
-        ])
-    }
-    
-    func testIncrement() {
-        
-        let components = prepareTestCompoments()
-        let scheduler = TestScheduler(initialClock: 200)
-        
-        scheduler.scheduleAt(400, action: components.action.increment)
-        
-        let pipeline = scheduler.start { () -> Observable<String> in
-            return components.viewModel.output.current.asObservable()
-        }
-        
-        XCTAssertEqual(pipeline.events, [
-            .next(200, "Counter: 0"),
-            .next(400, "Counter: 1"),
-        ])
-    }
-    
-    func testDecrement() {
-        
-        let components = prepareTestCompoments()
-        let scheduler = TestScheduler(initialClock: 200)
-        
-        scheduler.scheduleAt(400, action: components.action.decrement)
-        
-        let pipeline = scheduler.start { () -> Observable<String> in
-            return components.viewModel.output.current.asObservable()
-        }
-        
-        XCTAssertEqual(pipeline.events, [
-            .next(200, "Counter: 0"),
-            .next(400, "Counter: -1"),
-        ])
-    }
-    
-    func testIncrementAndDecrement() {
-        
-        let components = prepareTestCompoments()
-        let scheduler = TestScheduler(initialClock: 200)
-        
-        scheduler.scheduleAt(400, action: components.action.increment)
-        scheduler.scheduleAt(600, action: components.action.decrement)
-        
-        let pipeline = scheduler.start { () -> Observable<String> in
-            return components.viewModel.output.current.asObservable()
-        }
-        
-        XCTAssertEqual(pipeline.events, [
-            .next(200, "Counter: 0"),
-            .next(400, "Counter: 1"),
-            .next(600, "Counter: 0"),
-        ])
-    }
-    
-    typealias TestComponents = (viewModel: CounterViewModel, state: CounterObservable, action: Action)
-    typealias Action = (increment: () -> (), decrement: () -> ())
-    
-    private func prepareTestCompoments() -> TestComponents {
-        
-        let state = CounterObservable()
-        
-        let viewModel = CounterViewModel(state: state)
-        
-        let increment = { viewModel.input.increment.onNext(()) }
-        let decrement = { viewModel.input.decrement.onNext(()) }
-    
-        return (viewModel, state, (increment, decrement))
-    }
-}
-
-final class NaturalCounterObservableTests: XCTestCase {
+final class CounterObservableTests: XCTestCase {
     
     private var lastExpectation: XCTestExpectation?
     private var lastState: Int? {
@@ -325,7 +156,9 @@ final class NaturalCounterObservableTests: XCTestCase {
     }
 }
 
-final class NaturalCounterViewModelTests: XCTestCase {
+// MARK: - CounterViewModel Tests
+
+final class CounterViewModelTests: XCTestCase {
     
     private var lastExpectation: XCTestExpectation?
     private var lastState: String? {
@@ -413,3 +246,7 @@ final class NaturalCounterViewModelTests: XCTestCase {
         return (state, viewModel, (increment, decrement))
     }
 }
+
+
+
+//: [Next](@next)

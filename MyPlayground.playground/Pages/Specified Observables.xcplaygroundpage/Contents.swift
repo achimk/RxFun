@@ -7,7 +7,7 @@
 */
 
 /*:
- ##PublishSubject<T>
+ ### PublishSubject<T>
  * Represents an object that is both an observable sequence as well as an observer.
 */
 
@@ -27,7 +27,7 @@ final class PublishSubject<T> {
 }
 
 /*:
- ##BehaviourSubject<T>
+ ### BehaviourSubject<T>
  * Observers can subscribe to the subject to receive the last (or initial) value and all subsequent notifications.
 */
 
@@ -51,7 +51,7 @@ final class BehaviourSubject<T> {
 }
 
 /*:
- ##PublishRelay<T>
+ ### PublishRelay<T>
  * PublishRelay is a wrapper for `PublishSubject`.
  * Unlike `PublishSubject` it can't terminate with error or completed.
 */
@@ -76,7 +76,7 @@ final class PublishRelay<Element>: ObservableType {
 }
 
 /*:
- ##BehaviourRelay<T>
+ ### BehaviourRelay<T>
  * BehaviorRelay is a wrapper for `BehaviorSubject`.
  * Unlike `BehaviorSubject` it can't terminate with error or completed.
 */
