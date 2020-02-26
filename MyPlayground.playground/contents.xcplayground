@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='State-Driven App'/>
+        <page name='Before start'/>
+        <page name='Specified Observables'/>
+        <page name='Observable Convertible'/>
+        <page name='Counter Observable Sample'/>
+        <page name='Counter View Model Sample'/>
+        <page name='Counter Test Case'/>
+        <page name='Provider Sample'/>
+        <page name='Untitled Page'/>
+    </pages>
+</playground>
