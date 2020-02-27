@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw'>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
     <pages>
         <page name='State-Driven App'/>
         <page name='Before start (Observables)'/>
@@ -29,5 +29,15 @@
         <page name='State Machine Step 2'/>
         <page name='State Machine Step 3'/>
         <page name='State Machine Step 4'/>
+        <page name='Search Results Sample'/>
+        <page name='Search Results Step 1'/>
+        <page name='Search Results Step 2'/>
+        <page name='Search Results Step 3'/>
+        <page name='Search Results Step 4'/>
+        <page name='Search Results Step 5'/>
+        <page name='Search Results Step 6'/>
+        <page name='Search Results Step 7'/>
+        <page name='Search Restuls Test Case'/>
+        <page name='Summary'/>
     </pages>
 </playground>

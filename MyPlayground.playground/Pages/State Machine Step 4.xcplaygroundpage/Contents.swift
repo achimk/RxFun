@@ -30,7 +30,6 @@ final class SearchStateObservable: ObservableConvertibleType {
     }
     
     private let state = BehaviorRelay<State>(value: .start)
-    private let bag = DisposeBag()
     
     var current: State { return state.value }
     

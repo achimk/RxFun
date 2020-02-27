@@ -2,9 +2,9 @@
 
 /*:
  
- ### Sample code for API integration
+ ### Sample code
  
- 1. Define search API
+ 1. Define search API ✅
  2. Define SearchResultsObservable
  3. Define State of SearchResultsObservable
  4. Update actions and add dispatcher
@@ -13,5 +13,11 @@
  7. Prepare side effect
  
 */
+
+typealias SearchItem = String
+
+protocol SearchAPI {
+    func search(for text: String) -> Single<[SearchItem]>
+}
 
 //: [Next](@next)

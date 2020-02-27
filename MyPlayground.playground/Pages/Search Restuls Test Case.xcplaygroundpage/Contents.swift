@@ -1,7 +1,10 @@
-//
-//  Created by Joachim Kret on 27/02/2020.
-//  Copyright © 2020 Joachim Kret. All rights reserved.
-//
+//: [Previous](@previous)
+
+/*:
+ 
+ ### Search results test case
+ 
+*/
 
 import RxSwift
 import RxCocoa
@@ -28,6 +31,7 @@ final class SearchStateObservable: ObservableConvertibleType {
     }
     
     private let state = BehaviorRelay<State>(value: .start)
+    private let bag = DisposeBag()
     
     var current: State { return state.value }
     
@@ -53,7 +57,7 @@ final class SearchStateObservable: ObservableConvertibleType {
 }
 
 protocol SearchAPI {
-    func search(for text: String) -> Single<[SearchItem]>
+    func search(for value: String) -> Single<[SearchItem]>
 }
 
 final class SearchResultsObservable: ObservableConvertibleType {
@@ -314,7 +318,7 @@ final class SearchResultsObservableTests: XCTestCase {
         
         let publisher = PublishRelay<Result<[SearchItem], Error>>()
         
-        func search(for text: String) -> Single<[SearchItem]> {
+        func search(for value: String) -> Single<[SearchItem]> {
             return Single.create { [publisher] (observer) -> Disposable in
                 return publisher.subscribe(onNext: { result in
                     switch result {
@@ -478,3 +482,6 @@ final class SearchResultsObservableTests: XCTestCase {
         wait(for: [e], timeout: 1)
     }
 }
+
+
+//: [Next](@next)
