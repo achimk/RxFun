@@ -1,6 +1,6 @@
 /*:
 
-State-Driven App
+Building a state-driven app in RxSwift
 ==========
  
  **Why State-Driven**

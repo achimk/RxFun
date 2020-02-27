@@ -240,13 +240,13 @@ final class ScheduledCounterViewModelTests: XCTestCase {
 final class NaturalCounterObservableTests: XCTestCase {
     
     private var lastExpectation: XCTestExpectation?
-    private var lastState: Int? {
+    private var lastState: [Int] = [] {
         didSet { lastExpectation?.fulfill(); lastExpectation = nil }
     }
     private var bag = DisposeBag()
     
     override func tearDown() {
-        lastState = nil
+        lastState = []
         bag = DisposeBag()
         super.tearDown()
     }
@@ -256,7 +256,7 @@ final class NaturalCounterObservableTests: XCTestCase {
         let components = prepareTestComponents()
         bind(components.state)
         
-        XCTAssertEqual(lastState, 0)
+        XCTAssertEqual(lastState, [0])
     }
     
     func testIncrement() {
@@ -264,11 +264,9 @@ final class NaturalCounterObservableTests: XCTestCase {
         let components = prepareTestComponents()
         bind(components.state)
         
-        XCTAssertEqual(lastState, 0)
-        
         wait(for: components.action.increment)
         
-        XCTAssertEqual(lastState, 1)
+        XCTAssertEqual(lastState, [0, 1])
     }
     
     func testDecrement() {
@@ -276,11 +274,9 @@ final class NaturalCounterObservableTests: XCTestCase {
         let components = prepareTestComponents()
         bind(components.state)
         
-        XCTAssertEqual(lastState, 0)
-        
         wait(for: components.action.decrement)
         
-        XCTAssertEqual(lastState, -1)
+        XCTAssertEqual(lastState, [0, -1])
     }
     
     func testIncrementAndDecrement() {
@@ -288,20 +284,15 @@ final class NaturalCounterObservableTests: XCTestCase {
         let components = prepareTestComponents()
         bind(components.state)
         
-        XCTAssertEqual(lastState, 0)
-        
         wait(for: components.action.increment)
-        
-        XCTAssertEqual(lastState, 1)
-        
         wait(for: components.action.decrement)
         
-        XCTAssertEqual(lastState, 0)
+        XCTAssertEqual(lastState, [0, 1, 0])
     }
     
     private func bind(_ state: CounterObservable) {
         state.asObservable().subscribe(onNext: { [weak self] value in
-            self?.lastState = value
+            self?.lastState.append(value)
         }).disposed(by: bag)
     }
     
@@ -328,13 +319,13 @@ final class NaturalCounterObservableTests: XCTestCase {
 final class NaturalCounterViewModelTests: XCTestCase {
     
     private var lastExpectation: XCTestExpectation?
-    private var lastState: String? {
+    private var lastState: [String] = [] {
         didSet { lastExpectation?.fulfill(); lastExpectation = nil }
     }
     private var bag = DisposeBag()
     
     override func tearDown() {
-        lastState = nil
+        lastState = []
         bag = DisposeBag()
         super.tearDown()
     }
@@ -344,7 +335,7 @@ final class NaturalCounterViewModelTests: XCTestCase {
         let components = prepareTestComponents()
         bind(components.viewModel)
         
-        XCTAssertEqual(lastState, "Counter: 0")
+        XCTAssertEqual(lastState, ["Counter: 0"])
     }
     
     func testIncrement() {
@@ -352,23 +343,25 @@ final class NaturalCounterViewModelTests: XCTestCase {
         let components = prepareTestComponents()
         bind(components.viewModel)
         
-        XCTAssertEqual(lastState, "Counter: 0")
-        
         wait(for: components.action.increment)
         
-        XCTAssertEqual(lastState, "Counter: 1")
+        XCTAssertEqual(lastState, [
+            "Counter: 0",
+            "Counter: 1"
+        ])
     }
     
     func testDecrement() {
         
         let components = prepareTestComponents()
         bind(components.viewModel)
-        
-        XCTAssertEqual(lastState, "Counter: 0")
-        
+
         wait(for: components.action.decrement)
         
-        XCTAssertEqual(lastState, "Counter: -1")
+        XCTAssertEqual(lastState, [
+            "Counter: 0",
+            "Counter: -1"
+        ])
     }
     
     func testIncrementAndDecrement() {
@@ -376,20 +369,21 @@ final class NaturalCounterViewModelTests: XCTestCase {
         let components = prepareTestComponents()
         bind(components.viewModel)
         
-        XCTAssertEqual(lastState, "Counter: 0")
-        
         wait(for: components.action.increment)
-        
-        XCTAssertEqual(lastState, "Counter: 1")
-        
         wait(for: components.action.decrement)
         
-        XCTAssertEqual(lastState, "Counter: 0")
+        XCTAssertEqual(lastState, [
+            "Counter: 0",
+            "Counter: 1",
+            "Counter: 0"
+        ])
+        
+        
     }
     
     private func bind(_ viewModel: CounterViewModel) {
         viewModel.output.current.drive(onNext: { [weak self] value in
-            self?.lastState = value
+            self?.lastState.append(value)
         }).disposed(by: bag)
     }
     
