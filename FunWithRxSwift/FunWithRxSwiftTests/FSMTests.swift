@@ -478,3 +478,264 @@ final class SearchResultsObservableTests: XCTestCase {
         wait(for: [e], timeout: 1)
     }
 }
+
+struct SearchResultsViewState {
+    let state: SearchStateObservable.State
+    let items: [String]
+}
+
+final class SearchResultsViewModel {
+    
+    struct Input {
+        var enterSearch: Binder<Void>
+        var cancelSearch: Binder<Void>
+        var searchText: Binder<String>
+    }
+    
+    struct Output {
+        var viewState: Driver<SearchResultsViewState>
+    }
+    
+    let input: Input
+    let output: Output
+    
+    init(state: SearchResultsObservable) {
+        
+        let enterSearch = Binder<Void>(state, binding: { (state, _) in state.enterSearch() })
+        let cancelSearch = Binder<Void>(state, binding: { (state, _) in state.cancelSearch() })
+        let searchText = Binder<String>(state, binding: { (state, text) in state.search(for: text) })
+        
+        let viewState = state.asObservable().map { state in
+            SearchResultsViewState(state: state.searchState, items: state.searchResults)
+        }.asDriver(onErrorDriveWith: .empty())
+        
+        self.input = Input(enterSearch: enterSearch, cancelSearch: cancelSearch, searchText: searchText)
+        self.output = Output(viewState: viewState)
+    }
+}
+
+final class SearchResultsViewModelTests: XCTestCase {
+ 
+    final class ViewModel {
+        
+//        struct Input {
+//            var enterSearch: Binder<Void>
+//            var cancelSearch: Binder<Void>
+//            var searchText: Binder<String>
+//        }
+        
+//        struct Output {
+//            var viewState: Driver<SearchResultsViewState>
+//        }
+        
+//        let input: Input
+//        let output: Output
+        
+        var enterSearch: Binder<Void>
+        var cancelSearch: Binder<Void>
+        var searchText: Binder<String>
+        
+        init() {
+            
+            let obj = NSObject()
+            
+            let enterSearch = Binder<Void>(obj, binding: { (_, _) in
+                print("-> enter search")
+            })
+            let cancelSearch = Binder<Void>(obj, binding: { (_, _) in
+                print("-> cancel search")
+            })
+            let searchText = Binder<String>(obj, binding: { (_, _) in
+                print("-> search text")
+            })
+            
+//            self.input = Input(enterSearch: enterSearch, cancelSearch: cancelSearch, searchText: searchText)
+            self.enterSearch = enterSearch
+            self.cancelSearch = cancelSearch
+            self.searchText = searchText
+//            self.output = Output(viewState: .empty())
+        }
+    }
+    
+    private struct StubAPI: SearchAPI {
+        
+        let publisher = PublishRelay<Result<[SearchItem], Error>>()
+        
+        func search(for text: String) -> Single<[SearchItem]> {
+            return Single.create { [publisher] (observer) -> Disposable in
+                return publisher.subscribe(onNext: { result in
+                    switch result {
+                    case .success(let items):
+                        observer(.success(items))
+                    case .failure(let error):
+                        observer(.error(error))
+                    }
+                })
+            }
+        }
+    }
+    
+    private struct TestError: Error { }
+    private var lastExpectation: XCTestExpectation?
+    private var lastState: SearchResultsViewState? {
+        didSet { lastExpectation?.fulfill(); lastExpectation = nil }
+    }
+    private var bag = DisposeBag()
+    
+    override func tearDown() {
+        lastState = nil
+        bag = DisposeBag()
+        super.tearDown()
+    }
+    
+    struct Input {
+        var enterSearch: Binder<Void>
+        var cancelSearch: Binder<Void>
+        var searchText: Binder<String>
+    }
+    
+    func testBinders() {
+//        let components = prepareTestComponents()
+//        components.viewModel.input.enterSearch.on(.next(()))
+//        components.viewModel.input.cancelSearch.onNext(())
+//        components.viewModel.input.searchText.onNext("test")
+        
+        let viewModel = ViewModel()
+        viewModel.enterSearch.on(.next(()))
+        viewModel.cancelSearch.onNext(())
+        viewModel.searchText.onNext("test")
+    }
+    
+    func testInitialState() {
+        
+        let components = prepareTestComponents()
+        bind(components.viewModel)
+        
+        XCTAssertEqual(lastState?.state, .start)
+        XCTAssertEqual(lastState?.items, [])
+    }
+    
+    func testSearchingTransition() {
+        
+        let components = prepareTestComponents()
+        bind(components.viewModel)
+        
+        wait(for: components.action.enterSearch)
+        
+        XCTAssertEqual(lastState?.state, .searching)
+        XCTAssertEqual(lastState?.items, [])
+    }
+    
+    func testCancelSearchingTransition() {
+        
+        let components = prepareTestComponents()
+        bind(components.viewModel)
+        
+        wait(for: components.action.enterSearch)
+        wait(for: components.action.cancelSearch)
+        
+        XCTAssertEqual(lastState?.state, .start)
+        XCTAssertEqual(lastState?.items, [])
+    }
+    
+    func testLoadingTransition() {
+        let components = prepareTestComponents()
+        bind(components.viewModel)
+        
+        wait(for: components.action.enterSearch)
+        wait { components.action.searchText("test") }
+        
+        XCTAssertEqual(lastState?.state, .loading)
+        XCTAssertEqual(lastState?.items, [])
+    }
+    
+    func testSuccessTransition() {
+        let components = prepareTestComponents()
+        bind(components.viewModel)
+        
+        wait(for: components.action.enterSearch)
+        wait { components.action.searchText("test") }
+        wait { components.action.searchSuccess(["1", "2", "3"]) }
+        
+        XCTAssertEqual(lastState?.state, .searchResults)
+        XCTAssertEqual(lastState?.items, ["1", "2", "3"])
+    }
+    
+    func testFailureTransition() {
+        let components = prepareTestComponents()
+        bind(components.viewModel)
+        
+        wait(for: components.action.enterSearch)
+        wait { components.action.searchText("test") }
+        wait { components.action.searchFailure(TestError()) }
+        
+        XCTAssertEqual(lastState?.state, .error)
+        XCTAssertEqual(lastState?.items, [])
+    }
+    
+    func testSearchingFromSuccessTransition() {
+        let components = prepareTestComponents()
+        bind(components.viewModel)
+        
+        wait(for: components.action.enterSearch)
+        wait { components.action.searchText("test") }
+        wait { components.action.searchSuccess(["1", "2", "3"]) }
+        wait(for: components.action.enterSearch)
+        
+        XCTAssertEqual(lastState?.state, .searching)
+        XCTAssertEqual(lastState?.items, ["1", "2", "3"])
+    }
+    
+    func testSearchingFromFailureTransition() {
+        
+        let components = prepareTestComponents()
+        bind(components.viewModel)
+        
+        wait(for: components.action.enterSearch)
+        wait { components.action.searchText("test") }
+        wait { components.action.searchFailure(TestError()) }
+        wait(for: components.action.enterSearch)
+        
+        XCTAssertEqual(lastState?.state, .searching)
+        XCTAssertEqual(lastState?.items, [])
+    }
+ 
+    typealias TestComponents = (viewModel: SearchResultsViewModel, action: Action)
+    typealias Action = (
+        enterSearch: () -> (),
+        cancelSearch: () -> (),
+        searchText: (String) -> (),
+        searchSuccess: ([SearchItem]) -> (),
+        searchFailure: (Error) -> ()
+    )
+
+    private func prepareTestComponents() -> TestComponents {
+        
+        let api = StubAPI()
+        let state = SearchResultsObservable(api: api)
+        let viewModel = SearchResultsViewModel(state: state)
+        let enterSearch = { viewModel.input.enterSearch.onNext(()) }
+        let cancelSearch = { viewModel.input.cancelSearch.onNext(()) }
+        let searchText = viewModel.input.searchText.onNext
+        let searchSuccess: ([SearchItem]) -> () = { api.publisher.accept(.success($0)) }
+        let searchFailure: (Error) -> () = { api.publisher.accept(.failure($0)) }
+        
+        return (viewModel, (enterSearch, cancelSearch, searchText, searchSuccess, searchFailure))
+    }
+    
+    private func bind(_ viewModel: SearchResultsViewModel) {
+        viewModel.output.viewState
+            .drive(onNext: { [weak self] state in
+                print("output: \(state)")
+                self?.lastState = state
+            })
+            .disposed(by: bag)
+    }
+    
+    private func wait(for action: () -> ()) {
+        let e = expectation(description: "wait")
+        self.lastExpectation = e
+        action()
+        wait(for: [e], timeout: 1)
+    }
+}
